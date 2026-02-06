@@ -35,7 +35,6 @@ public class PlayerController : MonoBehaviour
         CheckGrounded();
 
         if (!canMove ) return;
-        // Updates potion based on input
 
         Vector3 camForward = playerCamera.transform.forward;
         Vector3 camRight = playerCamera.transform.right;
@@ -45,14 +44,12 @@ public class PlayerController : MonoBehaviour
         camForward.Normalize();
         camRight.Normalize();
 
+        // Relative movement based on camera orientation
         Vector3 move = (camForward * movement.z + camRight * movement.x).normalized;
-
         rb.MovePosition(rb.position + move * moveSpeed * Time.fixedDeltaTime);
     }
     private void LateUpdate()
     {
-        // Read the Vector2 properly
-
         float mouseX = look.x * mouseSensitivity;
         float mouseY = look.y * mouseSensitivity;
 
