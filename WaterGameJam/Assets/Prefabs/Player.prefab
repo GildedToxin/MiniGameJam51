@@ -300,12 +300,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   moveSpeed: 10
   canMove: 1
-  rb: {fileID: 0}
+  rb: {fileID: 3056691422341105248}
   isGrounded: 0
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
   jumpForce: 6
+  playerCamera: {fileID: 6906026946596641016}
+  mouseSensitivity: 1
 --- !u!114 &7594448631241085703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,7 +335,7 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: af6bd1b9-d875-4395-955e-411486afbac2
+  m_DefaultActionMap: Gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!54 &3056691422341105248
