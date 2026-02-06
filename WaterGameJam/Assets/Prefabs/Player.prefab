@@ -301,6 +301,11 @@ MonoBehaviour:
   moveSpeed: 10
   canMove: 1
   rb: {fileID: 0}
+  isGrounded: 0
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  jumpForce: 6
 --- !u!114 &7594448631241085703
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 347706398}
   - component: {fileID: 347706397}
   - component: {fileID: 347706396}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -435,10 +435,6 @@ PrefabInstance:
     - target: {fileID: 2050681901416207380, guid: 52f3945e68ed25743925ba329c1fb2f6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3056691422341105248, guid: 52f3945e68ed25743925ba329c1fb2f6, type: 3}
-      propertyPath: m_Constraints
-      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 9081161156878081971, guid: 52f3945e68ed25743925ba329c1fb2f6, type: 3}
       propertyPath: m_Name

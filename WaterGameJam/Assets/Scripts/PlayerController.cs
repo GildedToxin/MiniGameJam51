@@ -13,6 +13,11 @@ public class PlayerController : MonoBehaviour
     public bool canMove = true;
     public Rigidbody rb;
 
+    [Header("Jump")]
+    public bool isGrounded;
+    [SerializeField] LayerMask groundLayer;
+    [SerializeField] float jumpForce = 6f;
+
 
     private void Awake()
     {
@@ -21,6 +26,8 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        CheckGrounded();
+
         if (!canMove ) return;
         // Updates potion based on input
         rb.MovePosition(rb.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
@@ -33,13 +40,26 @@ public class PlayerController : MonoBehaviour
 
     public void OnJump(InputValue value)
     {
-        if (value.isPressed)
-            Debug.Log("Jump");
+        if (!value.isPressed) return;
+        if (!isGrounded) return;
+
+        rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
     }
+
 
     public void OnInteract(InputValue value)
     {
         if (value.isPressed)
             Debug.Log("Interact");
+    }
+
+    void CheckGrounded()
+    {
+        isGrounded = Physics.Raycast(
+            transform.position,
+            Vector3.down,
+            1.1f,
+            groundLayer
+        );
     }
 }
