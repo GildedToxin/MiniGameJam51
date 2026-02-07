@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
     {
         GameManager.Instance.player = this;
         rb = GetComponent<Rigidbody>();
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update()
