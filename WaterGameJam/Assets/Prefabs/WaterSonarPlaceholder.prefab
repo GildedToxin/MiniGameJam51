@@ -45,7 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SonarScript
   player: {fileID: 0}
-  underwaterPingsSpeed: 2.5
-  abovewaterPingsSpeed: 5
-  underwaterPingPrefab: {fileID: 3692325072045566589, guid: 037e3f18c1b30a34b91f8db681ce0a02, type: 3}
-  abovewaterPingPrefab: {fileID: 9015066962617793275, guid: d47e4fcff707bcb4593b7951f5604a98, type: 3}
+  underwaterPingPrefab: {fileID: 8981328492034245563, guid: 57d0dada73a6b2b4493d75082ddddfd8, type: 3}
+  abovewaterPingPrefab: {fileID: 4992465608763763806, guid: f7a7466982ad2bf4c9948be8da069e2c, type: 3}

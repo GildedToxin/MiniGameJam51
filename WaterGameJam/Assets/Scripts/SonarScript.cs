@@ -12,8 +12,8 @@ public class SonarScript : MonoBehaviour
     private float waterHeight = 9f;
 
     [Header("Ping Settings")]
-    private float underwaterPingsSpeed = 30f;
-    private float abovewaterPingsSpeed = 60f;
+    private float underwaterPingsSpeed = 5f;
+    private float abovewaterPingsSpeed = 20f;
     private List<GameObject> underwaterPings = new List<GameObject>();
     private List<GameObject> abovewaterPings = new List<GameObject>();
     [SerializeField] private GameObject underwaterPingPrefab;
@@ -54,8 +54,8 @@ public class SonarScript : MonoBehaviour
 
     private void SonarPing()
     {
-        abovewaterPings.Add(Instantiate(abovewaterPingPrefab, this.transform.position += new Vector3(0, 20, 0), Quaternion.identity));
-        underwaterPings.Add(Instantiate(underwaterPingPrefab, this.transform.position -= new Vector3(0, 40, 0), Quaternion.identity));
+        abovewaterPings.Add(Instantiate(abovewaterPingPrefab, this.transform.position += new Vector3(0, 25.25f, 0), Quaternion.identity));
+        underwaterPings.Add(Instantiate(underwaterPingPrefab, this.transform.position -= new Vector3(0, 50.5f, 0), Quaternion.identity));
         playerController.sonarEffect = false;
     }
 
