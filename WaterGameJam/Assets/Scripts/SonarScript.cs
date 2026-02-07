@@ -10,7 +10,7 @@ public class SonarScript : MonoBehaviour
 
     void Update()
     {
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        if (Keyboard.current.fKey.wasPressedThisFrame)
         {
             EmitSonar();
             Debug.Log("Sonar Emitted");
