@@ -155,7 +155,7 @@ public class PlayerController : MonoBehaviour
     {
         print("sonar pinged");  
         if (ctx.started)
-            GameManager.Instance.SonarPing(this.transform.position);
+            GameManager.Instance.SonarPing(this.transform.position);    
     }
 
     public void LookDirection() 
