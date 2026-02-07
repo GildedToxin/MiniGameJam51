@@ -25,10 +25,20 @@ public class PlayerController : MonoBehaviour
     public float mouseSensitivity = 1f;
     private float xRotation = 0f;
 
+    [Header("Oxygen")]
+    public float oxygenLevel = 100f;
+    private float oxygenDepletionRate = 5f;
+    
+
     private void Start()
     {
         GameManager.Instance.player = this;
         rb = GetComponent<Rigidbody>();
+    }
+
+    private void Update()
+    {
+        DepleteOxygen();
     }
 
     private void FixedUpdate()
@@ -93,5 +103,22 @@ public class PlayerController : MonoBehaviour
     {
         if (value.isPressed)
             Debug.Log("Interact");
+    }
+
+    private void DepleteOxygen()
+    {
+        oxygenLevel -= oxygenDepletionRate * Time.deltaTime;
+        oxygenLevel = Mathf.Clamp(oxygenLevel, 0f, 100f);
+
+        if (oxygenLevel <= 0f)
+        {
+            Debug.Log("Player has run out of oxygen!");
+        }
+    }
+
+    public void RestoreOxygen(float oxyRegen = 20f)
+    {
+        oxygenLevel += oxyRegen;
+        oxygenLevel = Mathf.Clamp(oxygenLevel, 0f, 100f);
     }
 }
