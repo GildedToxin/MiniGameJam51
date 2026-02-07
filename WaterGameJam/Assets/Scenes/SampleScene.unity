@@ -171,6 +171,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8d2fc2e2ac606674cbc31fc44b6035ba, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: 8d2fc2e2ac606674cbc31fc44b6035ba, type: 3}
       propertyPath: m_Name
       value: HallwaySlope (1)
@@ -267,6 +271,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
       propertyPath: m_Name
       value: HallwayStraight (7)
@@ -493,6 +501,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c15acc05ef97f8945883af24170ac1cc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: c15acc05ef97f8945883af24170ac1cc, type: 3}
       propertyPath: m_Name
       value: HallwayWindowBoth (5)
@@ -559,6 +571,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
       propertyPath: m_Name
       value: HallwayStraight (4)
@@ -659,6 +675,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 0f0ce14a0cd9aa6468687ce7186b0d3e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: 0f0ce14a0cd9aa6468687ce7186b0d3e, type: 3}
       propertyPath: m_Name
       value: HallwayCorner (2)
@@ -759,6 +779,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c15acc05ef97f8945883af24170ac1cc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: c15acc05ef97f8945883af24170ac1cc, type: 3}
       propertyPath: m_Name
       value: HallwayWindowBoth (1)
@@ -859,6 +883,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ab762f57628513a408ac4f59037d3b36, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: ab762f57628513a408ac4f59037d3b36, type: 3}
       propertyPath: m_Name
       value: 4WayIntersection (1)
@@ -955,6 +983,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
       propertyPath: m_Name
       value: HallwayStraight (15)
@@ -1144,6 +1176,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
       propertyPath: m_Name
       value: HallwayStraight (2)
@@ -1371,6 +1407,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8d2fc2e2ac606674cbc31fc44b6035ba, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: 8d2fc2e2ac606674cbc31fc44b6035ba, type: 3}
       propertyPath: m_Name
       value: HallwaySlope (3)
@@ -1685,6 +1725,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
       propertyPath: m_Name
       value: HallwayStraight (14)
@@ -1781,6 +1825,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
       propertyPath: m_Name
       value: HallwayStraight (21)
@@ -1877,6 +1925,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8d2fc2e2ac606674cbc31fc44b6035ba, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: 8d2fc2e2ac606674cbc31fc44b6035ba, type: 3}
       propertyPath: m_Name
       value: HallwaySlope
@@ -1945,6 +1997,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 0f0ce14a0cd9aa6468687ce7186b0d3e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: 0f0ce14a0cd9aa6468687ce7186b0d3e, type: 3}
       propertyPath: m_Name
       value: HallwayCorner
@@ -2006,6 +2062,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
       propertyPath: m_Name
       value: HallwayStraight (1)
@@ -2102,6 +2162,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 4879b309d7e5a9243833fa0adb05bb8a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: 4879b309d7e5a9243833fa0adb05bb8a, type: 3}
       propertyPath: m_Name
       value: HallwayBroken (1)
@@ -2200,6 +2264,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f09fec9ce1d9f3c4c86d9fb5a083dc54, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: f09fec9ce1d9f3c4c86d9fb5a083dc54, type: 3}
       propertyPath: m_Name
       value: HallwayCornerWindow
@@ -2296,6 +2364,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
       propertyPath: m_Name
       value: HallwayStraight (6)
@@ -2441,6 +2513,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
       propertyPath: m_Name
       value: HallwayStraight (22)
@@ -2537,6 +2613,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
       propertyPath: m_Name
       value: HallwayStraight (5)
@@ -2642,6 +2722,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c15acc05ef97f8945883af24170ac1cc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: c15acc05ef97f8945883af24170ac1cc, type: 3}
       propertyPath: m_Name
       value: HallwayWindowBoth (6)
@@ -2708,6 +2792,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
       propertyPath: m_Name
       value: HallwayStraight (20)
@@ -2861,6 +2949,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
       propertyPath: m_Name
       value: HallwayStraight (18)
@@ -2957,6 +3049,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c76d505b05ed8764ead892eb543a300c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: c76d505b05ed8764ead892eb543a300c, type: 3}
       propertyPath: m_Name
       value: HallwayWindowSide
@@ -3018,6 +3114,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
       propertyPath: m_Name
       value: HallwayStraight (9)
@@ -3114,6 +3214,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
       propertyPath: m_Name
       value: HallwayStraight (13)
@@ -3445,6 +3549,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 4879b309d7e5a9243833fa0adb05bb8a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: 4879b309d7e5a9243833fa0adb05bb8a, type: 3}
       propertyPath: m_Name
       value: HallwayBroken
@@ -3506,6 +3614,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
       propertyPath: m_Name
       value: HallwayStraight (17)
@@ -3602,6 +3714,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
       propertyPath: m_Name
       value: HallwayStraight
@@ -3666,6 +3782,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
       propertyPath: m_Name
       value: HallwayStraight (11)
@@ -3766,6 +3886,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c15acc05ef97f8945883af24170ac1cc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: c15acc05ef97f8945883af24170ac1cc, type: 3}
       propertyPath: m_Name
       value: HallwayWindowBoth
@@ -3862,6 +3986,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c15acc05ef97f8945883af24170ac1cc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: c15acc05ef97f8945883af24170ac1cc, type: 3}
       propertyPath: m_Name
       value: HallwayWindowBoth (2)
@@ -4083,6 +4211,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c15acc05ef97f8945883af24170ac1cc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: c15acc05ef97f8945883af24170ac1cc, type: 3}
       propertyPath: m_Name
       value: HallwayWindowBoth (4)
@@ -4179,6 +4311,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c15acc05ef97f8945883af24170ac1cc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: c15acc05ef97f8945883af24170ac1cc, type: 3}
       propertyPath: m_Name
       value: HallwayWindowBoth (3)
@@ -4275,6 +4411,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
       propertyPath: m_Name
       value: HallwayStraight (19)
@@ -4371,6 +4511,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
       propertyPath: m_Name
       value: HallwayStraight (16)
@@ -4471,6 +4615,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 0f0ce14a0cd9aa6468687ce7186b0d3e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: 0f0ce14a0cd9aa6468687ce7186b0d3e, type: 3}
       propertyPath: m_Name
       value: HallwayCorner (1)
@@ -4572,6 +4720,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
       propertyPath: m_Name
       value: HallwayStraight (10)
@@ -4668,6 +4820,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
       propertyPath: m_Name
       value: HallwayStraight (12)
@@ -4764,6 +4920,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
       propertyPath: m_Name
       value: HallwayStraight (3)
@@ -4864,6 +5024,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ab762f57628513a408ac4f59037d3b36, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: ab762f57628513a408ac4f59037d3b36, type: 3}
       propertyPath: m_Name
       value: 4WayIntersection
@@ -4960,6 +5124,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
       propertyPath: m_Name
       value: HallwayStraight (8)
@@ -5056,6 +5224,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8d2fc2e2ac606674cbc31fc44b6035ba, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: 8d2fc2e2ac606674cbc31fc44b6035ba, type: 3}
       propertyPath: m_Name
       value: HallwaySlope (2)
@@ -5152,6 +5324,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 0f0ce14a0cd9aa6468687ce7186b0d3e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
     - target: {fileID: 919132149155446097, guid: 0f0ce14a0cd9aa6468687ce7186b0d3e, type: 3}
       propertyPath: m_Name
       value: HallwayCorner (3)
@@ -5218,7 +5394,7 @@ PrefabInstance:
       objectReference: {fileID: 1259961032}
     - target: {fileID: 6139707738680165055, guid: 82ad3ac57735fab43b3d231739a10443, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.62
+      value: -34.62
       objectReference: {fileID: 0}
     - target: {fileID: 6139707738680165055, guid: 82ad3ac57735fab43b3d231739a10443, type: 3}
       propertyPath: m_LocalPosition.y
