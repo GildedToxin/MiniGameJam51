@@ -29,7 +29,17 @@ public class PlayerController : MonoBehaviour
     [Header("Oxygen")]
     public float oxygenLevel = 100f;
     private float oxygenDepletionRate = 5f;
-    
+
+    [Header("Slope Handling")]
+    [SerializeField] private float groundCheckDistance = 1.3f;
+    [SerializeField] private float groundStickForce = 20f;
+    private RaycastHit groundHit;
+
+
+    [SerializeField] private float airControl = 0.4f;
+    [SerializeField] private float extraGravity = 25f;
+    [SerializeField] private float maxFallSpeed = -20f;
+
 
     private void Start()
     {
@@ -47,7 +57,7 @@ public class PlayerController : MonoBehaviour
     {
         CheckGrounded();
 
-        if (!canMove ) return;
+        if (!canMove) return;
 
         Vector3 camForward = playerCamera.transform.forward;
         Vector3 camRight = playerCamera.transform.right;
@@ -57,10 +67,39 @@ public class PlayerController : MonoBehaviour
         camForward.Normalize();
         camRight.Normalize();
 
-        // Relative movement based on camera orientation
-        Vector3 move = (camForward * movement.z + camRight * movement.x).normalized;
-        rb.MovePosition(rb.position + move * moveSpeed * Time.fixedDeltaTime);
+        Vector3 moveInput = (camForward * movement.z + camRight * movement.x);
+
+        if (isGrounded)
+        {
+            // Stick to slope
+            moveInput = Vector3.ProjectOnPlane(moveInput, groundHit.normal);
+
+            rb.MovePosition(rb.position + moveInput.normalized * moveSpeed * Time.fixedDeltaTime);
+
+            // Ground stick
+            rb.AddForce(Vector3.down * 30f, ForceMode.Acceleration);
+        }
+        else
+        {
+            // Air movement (velocity-based)
+            Vector3 airMove = moveInput.normalized * moveSpeed * airControl;
+            rb.linearVelocity = new Vector3(
+                airMove.x,
+                rb.linearVelocity.y,
+                airMove.z
+            );
+
+            // Strong gravity = no float
+            rb.AddForce(Vector3.down * extraGravity, ForceMode.Acceleration);
+        }
+
+        // Clamp fall speed
+        if (rb.linearVelocity.y < maxFallSpeed)
+        {
+            rb.linearVelocity = new Vector3(rb.linearVelocity.x, maxFallSpeed, rb.linearVelocity.z);
+        }
     }
+
     private void LateUpdate()
     {
         float mouseX = look.x * mouseSensitivity;
@@ -98,10 +137,12 @@ public class PlayerController : MonoBehaviour
         isGrounded = Physics.Raycast(
             transform.position,
             Vector3.down,
-            1.1f,
+            out groundHit,
+            groundCheckDistance,
             groundLayer
         );
     }
+
     public void OnInteract(InputAction.CallbackContext ctx)
     {
         if (ctx.started)
