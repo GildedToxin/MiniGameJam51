@@ -309,6 +309,7 @@ MonoBehaviour:
   jumpForce: 6
   playerCamera: {fileID: 6906026946596641016}
   mouseSensitivity: 1
+  interactionDistance: 2
   oxygenLevel: 100
   groundCheckDistance: 1.3
   airControl: 0.4

@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
     private float xRotation = 0f;
 
     private IPlayerLookTarget currentLookAt;
+    [SerializeField] private float interactionDistance = 5f;
+
     [Header("Oxygen")]
     public float oxygenLevel = 100f;
     private float oxygenDepletionRate = 5f;
@@ -163,7 +165,7 @@ public class PlayerController : MonoBehaviour
         Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
         Debug.DrawRay(ray.origin, ray.direction * 50, Color.green);
 
-        if (Physics.Raycast(ray, out RaycastHit hit, 10f, Physics.DefaultRaycastLayers, QueryTriggerInteraction.Ignore))
+        if (Physics.Raycast(ray, out RaycastHit hit, interactionDistance, Physics.DefaultRaycastLayers, QueryTriggerInteraction.Ignore))
         {
             IPlayerLookTarget lookable = hit.collider.GetComponent<IPlayerLookTarget>()
                           ?? hit.collider.GetComponentInParent<IPlayerLookTarget>();
