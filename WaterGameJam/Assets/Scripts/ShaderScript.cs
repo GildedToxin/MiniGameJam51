@@ -4,6 +4,7 @@ public class ShaderScript : MonoBehaviour
 {
     private Camera cam;
     public Shader toonShader;
+    private bool shaderEnabled;
 
     void Start()
     {
@@ -12,9 +13,19 @@ public class ShaderScript : MonoBehaviour
     
     void Update()
     {
-        if (this.enabled)
-            cam.RenderWithShader(toonShader, "");
-        cam.SetReplacementShader(toonShader, "");
+     
+    }
 
+    [ContextMenu("SwitchShader")]
+    void SwitchShader() { 
+     shaderEnabled = !shaderEnabled;
+        if (shaderEnabled)
+        {
+            cam.SetReplacementShader(toonShader, "");
+        }
+        else
+        {
+            cam.ResetReplacementShader();
+        }
     }
 }

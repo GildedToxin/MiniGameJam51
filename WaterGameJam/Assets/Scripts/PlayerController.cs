@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     public float mouseSensitivity = 1f;
     private float xRotation = 0f;
 
-    private void Awake()
+    private void Start()
     {
         GameManager.Instance.player = this;
         rb = GetComponent<Rigidbody>();
