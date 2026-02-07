@@ -32,7 +32,6 @@ public class PlayerController : MonoBehaviour
 
     [Header("Slope Handling")]
     [SerializeField] private float groundCheckDistance = 1.3f;
-    [SerializeField] private float groundStickForce = 20f;
     private RaycastHit groundHit;
 
 
@@ -150,6 +149,13 @@ public class PlayerController : MonoBehaviour
 
         if (ctx.canceled)
             currentLookAt?.StopInteract();
+    }
+
+    public void OnSonar(InputAction.CallbackContext ctx)
+    {
+        print("sonar pinged");  
+        if (ctx.started)
+            GameManager.Instance.SonarPing(this.transform.position);
     }
 
     public void LookDirection() 

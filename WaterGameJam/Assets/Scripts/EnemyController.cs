@@ -9,6 +9,7 @@ public class EnemyController : MonoBehaviour
     private NavMeshAgent agent;
 
     [Header("Settings")]
+    public float searchDistance = 50f;    
     public float chaseDistance = 10f;    
     public float attackDistance = 1f;    
     public float moveSpeed = 3.5f;
@@ -24,7 +25,10 @@ public class EnemyController : MonoBehaviour
         agent.speed = moveSpeed;
         agent.isStopped = true; // Start stationary
     }
-
+    private void Start()
+    {
+        GameManager.Instance.RegisterEnemy(gameObject);
+    }
     void Update()
     {
         if (player == null) return;
@@ -33,12 +37,14 @@ public class EnemyController : MonoBehaviour
 
         if (distanceToPlayer <= attackDistance)
         {
+            print("attacking player!");
             AttackPlayer();
             agent.isStopped = true;
         }
 
         else if (distanceToPlayer <= chaseDistance)
         {
+            print("chasing player!");
             agent.isStopped = false;
             agent.SetDestination(player.position);
             if(targetLocation.HasValue)
@@ -49,6 +55,7 @@ public class EnemyController : MonoBehaviour
 
         else if (targetLocation.HasValue)
         {
+            print("searching ping!");
             agent.isStopped = false;
             agent.SetDestination(targetLocation.Value);
 
@@ -62,6 +69,7 @@ public class EnemyController : MonoBehaviour
 
         else
         {
+            print("nothing to do!");
             agent.isStopped = true;
         }
     }
@@ -71,14 +79,19 @@ public class EnemyController : MonoBehaviour
     {
         targetLocation = location;
     }
-    [ContextMenu("Go To Location 2")]
-    public void GoToLocation2()
-    {
-        targetLocation = new Vector3(0,0,0);
-    }
-
     private void AttackPlayer()
     {
         Debug.Log("Attacking player!");
+    }
+
+    public void ReceiveSonarPing(Vector3 location)
+    {
+        print("received ping at " + location);
+        float distanceToPing = Vector3.Distance(transform.position, location);
+
+        if (distanceToPing <= searchDistance)
+        {
+            targetLocation = location;
+        }
     }
 }
