@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     public float mouseSensitivity = 1f;
     private float xRotation = 0f;
 
+    private IPlayerLookTarget currentLookAt;
     private void Start()
     {
         GameManager.Instance.player = this;
@@ -61,21 +62,22 @@ public class PlayerController : MonoBehaviour
 
         // Rotate player horizontally
         transform.Rotate(Vector3.up * mouseX);
+        LookDirection();
     }
 
 
-    public void OnMove(InputValue value)
+    public void OnMove(InputAction.CallbackContext ctx)
     {
-        movement = new Vector3(value.Get<Vector2>().x, 0, value.Get<Vector2>().y);
+        movement = new Vector3(ctx.ReadValue<Vector2>().x, 0, ctx.ReadValue<Vector2>().y);
     }
-    public void OnLook(InputValue value)
+    public void OnLook(InputAction.CallbackContext ctx)
     {
-        look = value.Get<Vector2>();
+        look = ctx.ReadValue<Vector2>();
     }
 
-    public void OnJump(InputValue value)
+    public void OnJump(InputAction.CallbackContext ctx)
     {
-        if (!value.isPressed) return;
+        if (!ctx.started) return;
         if (!isGrounded) return;
 
         rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
@@ -89,9 +91,43 @@ public class PlayerController : MonoBehaviour
             groundLayer
         );
     }
-    public void OnInteract(InputValue value)
+    public void OnInteract(InputAction.CallbackContext ctx)
     {
-        if (value.isPressed)
-            Debug.Log("Interact");
+        if (ctx.started)
+            currentLookAt?.Interact();
+
+        if (ctx.canceled)
+            currentLookAt?.StopInteract();
     }
+
+    public void LookDirection() 
+    {
+        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+        Debug.DrawRay(ray.origin, ray.direction * 50, Color.green);
+
+        if (Physics.Raycast(ray, out RaycastHit hit, 10f, Physics.DefaultRaycastLayers, QueryTriggerInteraction.Ignore))
+        {
+            IPlayerLookTarget lookable = hit.collider.GetComponent<IPlayerLookTarget>()
+                          ?? hit.collider.GetComponentInParent<IPlayerLookTarget>();
+            if (lookable != null)
+            {
+                // If looking at a new object, turn off the last one and turn on the new one
+                if (currentLookAt != lookable)
+                {
+                    currentLookAt?.OnLookExit();
+                    currentLookAt = lookable;
+                    currentLookAt.OnLookEnter();
+                }
+                return;
+            }
+        }
+
+        // If nothing is hit, turn off the last object looked at
+        if (currentLookAt != null)
+        {
+            currentLookAt.OnLookExit();
+            currentLookAt = null;
+        }
+    }
+
 }
