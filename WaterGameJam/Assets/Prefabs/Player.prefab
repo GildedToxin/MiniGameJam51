@@ -260,7 +260,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2050681901416207380}
   - component: {fileID: 4714468010491158196}
-  - component: {fileID: 9187057501343283539}
   - component: {fileID: 7594448631241085703}
   - component: {fileID: 3056691422341105248}
   m_Layer: 8
@@ -315,19 +314,7 @@ MonoBehaviour:
   airControl: 0.4
   extraGravity: 25
   maxFallSpeed: -20
---- !u!114 &9187057501343283539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9081161156878081971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17ff137cb2de0ad4dabb8eec24efd133, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  playerTransform: {fileID: 0}
+  sonarEffect: 0
 --- !u!114 &7594448631241085703
 MonoBehaviour:
   m_ObjectHideFlags: 0
