@@ -28,3 +28,4 @@ public class PauseMenuBehavior : Pause
     {
         GameManager.Instance.LoadScene("SampleScene"); //replace with home menu scene name
     }
+}
