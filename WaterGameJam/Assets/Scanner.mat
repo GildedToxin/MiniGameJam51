@@ -43,7 +43,7 @@ Material:
     - _RANGE: 0
     - _Range: 1.47
     m_Colors:
-    - _Color: {r: 0, g: 1, b: 0.14366046, a: 0}
+    - _Color: {r: 0, g: 0.8018868, b: 0.48842648, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &5778623072682134391
