@@ -41,6 +41,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float extraGravity = 25f;
     [SerializeField] private float maxFallSpeed = -20f;
 
+    [HideInInspector]
+    public bool sonarEffect = false;
+
 
     private void Start()
     {
@@ -158,6 +161,8 @@ public class PlayerController : MonoBehaviour
         print("sonar pinged");  
         if (ctx.started)
             GameManager.Instance.SonarPing(this.transform.position);    
+
+        sonarEffect = true;
     }
 
     public void LookDirection() 
