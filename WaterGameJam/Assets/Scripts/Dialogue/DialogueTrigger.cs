@@ -4,6 +4,8 @@ public class DialogueTrigger : MonoBehaviour
 {
   public DialogueGroup dialogueGroup;
 
+
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.GetComponentInParent<PlayerController>())
