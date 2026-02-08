@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
     [HideInInspector] public bool sonarEffect = false;
     [HideInInspector] public bool isMoving = false;
     [HideInInspector] public bool isSneaking = false;
-    [HideInInspector] private bool isUnderwater = false;
+    public bool isUnderwater = false;
 
     AudioTransitions audioTransitions;
 

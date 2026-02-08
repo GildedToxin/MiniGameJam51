@@ -5,14 +5,15 @@ public class AudioTransitions : MonoBehaviour
 {
     public AudioMixerSnapshot underwater;
     public AudioMixerSnapshot outOfWater;
+    public float transitionSpeed = 0.5f;
     public void underwaterToOverwater()
     {
-        outOfWater.TransitionTo(1.0f);
+        outOfWater.TransitionTo(transitionSpeed);
     }
 
     public void overwaterToUnderwater()
     {
-        underwater.TransitionTo(1.0f);
+        underwater.TransitionTo(transitionSpeed);
 
     }
 }

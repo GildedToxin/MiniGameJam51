@@ -2332,6 +2332,26 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1616458658916155781, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
+--- !u!1 &565926707 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1562464506341999404, guid: e040300ee287dbf4d8aef19eb7be1840, type: 3}
+  m_PrefabInstance: {fileID: 1043572394}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &565926711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565926707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26c19ad3b823a974aa768d1116524e86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioTransitions
+  underwater: {fileID: 8578338181684433413, guid: d90610d6f6129894785f5276eb63750c, type: 2}
+  outOfWater: {fileID: 24500006, guid: d90610d6f6129894785f5276eb63750c, type: 2}
+  transitionSpeed: 0.5
 --- !u!1001 &594952364
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3432,7 +3452,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1562464506341999404, guid: e040300ee287dbf4d8aef19eb7be1840, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 565926711}
   m_SourcePrefab: {fileID: 100100000, guid: e040300ee287dbf4d8aef19eb7be1840, type: 3}
 --- !u!1001 &1066416352
 PrefabInstance:
