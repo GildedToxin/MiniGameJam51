@@ -1,14 +1,17 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class AISonarScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private float waterHeight = 9f;
+
+    private List<GameObject> aiPings = new List<GameObject>();
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
