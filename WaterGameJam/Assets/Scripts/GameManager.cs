@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public SonarScript sonarScript;
 
 
+    public Valve lastTurnedValve;
+
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -61,7 +63,20 @@ public class GameManager : MonoBehaviour
 
     public void KillPlayer()
     {
+        hud.PlayerHurt();
         player.KillPlayer();
+        RespawnPlayer();
+    }
+
+    public void RespawnPlayer()
+    {
+        if(lastTurnedValve == null)
+        {
+            UnityEngine.Debug.LogWarning("No last turned valve set for respawn!");
+            return;
+        }
+        player.transform.position = lastTurnedValve.transform.GetChild(3).position;
+        player.transform.rotation = lastTurnedValve.transform.GetChild(3).rotation;
     }
 
     [ContextMenu("Increase Water Level")]
