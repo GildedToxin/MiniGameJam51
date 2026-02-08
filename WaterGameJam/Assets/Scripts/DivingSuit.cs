@@ -9,6 +9,7 @@ public class DivingSuit : MonoBehaviour, IPlayerLookTarget
 
     public GameObject spawnRoom;
     public Material blackMat;
+    public AudioSource audioSource;
     public void OnLookEnter()
     {
         isLookedAt = true;
@@ -22,6 +23,7 @@ public class DivingSuit : MonoBehaviour, IPlayerLookTarget
         isInteracting = true;
 
         DialogueManager.Instance.PlayDialogueSequence(dialogueGroup);
+        audioSource.Play();
         Destroy(gameObject);
 
         foreach (Renderer r in spawnRoom.GetComponentsInChildren<Renderer>())
