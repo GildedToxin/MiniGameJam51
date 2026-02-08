@@ -12,7 +12,7 @@ public class SonarScript : MonoBehaviour
     private float waterHeight = 9f;
 
     [Header("Ping Settings")]
-    private float underwaterPingsSpeed = 7f;
+    private float underwaterPingsSpeed = 10f;
     private float abovewaterPingsSpeed = 15f;
     private List<GameObject> underwaterWalkPings = new List<GameObject>();
     private List<GameObject> abovewaterWalkPings = new List<GameObject>();
@@ -24,8 +24,8 @@ public class SonarScript : MonoBehaviour
     [SerializeField] private GameObject underwaterPingPrefab;
     [SerializeField] private GameObject abovewaterPingPrefab;
     private float pingSizeDeathThreshold = 30f;
-    private float pingSizeDeathThresholdSneaking = 2.5f;
-    private float pingSizeDeathThresholdWalking = 5f;
+    private float pingSizeDeathThresholdSneaking = 4f;
+    private float pingSizeDeathThresholdWalking = 7f;
 
     private float walkCooldown = 0.5f;
     private float walkTimer = 0f;
