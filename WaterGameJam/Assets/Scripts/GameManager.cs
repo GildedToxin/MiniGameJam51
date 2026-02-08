@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
         {
             firstEnemy.SetActive(true);
         }
-        else if (currentWaterLevel == 2)
+        else if (currentWaterLevel == 5)
         {
             secondEnemy.SetActive(true);
         }
