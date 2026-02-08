@@ -13,6 +13,7 @@ public class EnemyController : MonoBehaviour
     public float chaseDistance = 10f;    
     public float attackDistance = 1f;    
     public float moveSpeed = 3.5f;
+    private float killDistance = 1f;
 
 
     private Vector3? targetLocation = null;
@@ -71,6 +72,11 @@ public class EnemyController : MonoBehaviour
         {
             print("nothing to do!");
             agent.isStopped = true;
+        }
+
+        if (Vector3.Distance(player.position, this.transform.position) <= killDistance)
+        {
+            GameManager.Instance.KillPlayer();
         }
     }
 
