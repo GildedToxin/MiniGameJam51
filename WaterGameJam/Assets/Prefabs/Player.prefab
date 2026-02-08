@@ -73,7 +73,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 191
+    m_Bits: 703
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -316,6 +316,8 @@ MonoBehaviour:
   maxFallSpeed: -20
   sonarEffect: 0
   isMoving: 0
+  isSneaking: 0
+  isUnderwater: 0
 --- !u!114 &7594448631241085703
 MonoBehaviour:
   m_ObjectHideFlags: 0
