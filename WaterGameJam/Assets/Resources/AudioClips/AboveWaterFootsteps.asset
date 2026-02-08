@@ -12,4 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 654bca92b22ef414cb7087da68404b35, type: 3}
   m_Name: AboveWaterFootsteps
   m_EditorClassIdentifier: Assembly-CSharp::AudioClipGroup
-  clips: []
+  clips:
+  - {fileID: 8300000, guid: e104eec105e196d4896a5a4abcfe167b, type: 3}
+  - {fileID: 8300000, guid: a7609ffdb30c5f143b3a5ccdc6a9dbe5, type: 3}
+  - {fileID: 8300000, guid: 59d687063fd5c414e9c25e6a190c8662, type: 3}
+  - {fileID: 8300000, guid: 57a81b854cd3e0e44b6de11f07672d78, type: 3}
+  - {fileID: 8300000, guid: d999ba0ef2fc11c488268a040c2c1b5a, type: 3}
+  - {fileID: 8300000, guid: 8fa51fe2c2f7db34e80089f87157877c, type: 3}
+  - {fileID: 8300000, guid: 04b0ed7ef43ce824b999e08e9681eaed, type: 3}
+  - {fileID: 8300000, guid: 249371572ef09f048b0bcea324bf9c80, type: 3}
+  - {fileID: 8300000, guid: 1f6f9a9d2ae44a041a1eb0540095b4ed, type: 3}
+  - {fileID: 8300000, guid: dc6a70b9c68d38e4ca136c24d8dbbac0, type: 3}
+  - {fileID: 8300000, guid: bdd9e2fc00cb0cd4780f90ca5c8b8cd9, type: 3}

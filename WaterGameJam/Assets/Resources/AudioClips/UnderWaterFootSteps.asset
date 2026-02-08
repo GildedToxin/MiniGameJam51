@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: UnderWaterFootSteps
   m_EditorClassIdentifier: Assembly-CSharp::AudioClipGroup
   clips:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 079e7c584db0c0243a74f7ed51282c98, type: 3}
+  - {fileID: 8300000, guid: b3ec5784f9127144d8b29c8195896448, type: 3}
+  - {fileID: 8300000, guid: 4bb7132e8b3d4694ba32d001bfdbddc2, type: 3}
+  - {fileID: 8300000, guid: dd1406f5a498a834381a061bd39c4600, type: 3}
+  - {fileID: 8300000, guid: 897ac817723f42f419ce627e63b0476e, type: 3}
+  - {fileID: 8300000, guid: bdf61cbd374b8f6428d9a8b110bcdeb6, type: 3}
+  - {fileID: 8300000, guid: 83de9ba932c7bae438b411dcf4379c07, type: 3}
+  - {fileID: 8300000, guid: 44980416cca731a47923d1dace61a4b2, type: 3}
+  - {fileID: 8300000, guid: a8b3d89c7ca0f264b85a927353d9816a, type: 3}

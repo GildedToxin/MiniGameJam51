@@ -12,4 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 654bca92b22ef414cb7087da68404b35, type: 3}
   m_Name: TrudgeFootsteps
   m_EditorClassIdentifier: Assembly-CSharp::AudioClipGroup
-  clips: []
+  clips:
+  - {fileID: 8300000, guid: c3004399fb97d16409c0b8e7afa073dc, type: 3}
+  - {fileID: 8300000, guid: cbdb4e6e21dddc840b9fcd24a1f90048, type: 3}
+  - {fileID: 8300000, guid: 40ab1c069912fd442b1c77db6ada255d, type: 3}
+  - {fileID: 8300000, guid: 0d3898cacdf2a1744866710fd8482693, type: 3}
+  - {fileID: 8300000, guid: b304a98f75268bb438fda6810d96984b, type: 3}
