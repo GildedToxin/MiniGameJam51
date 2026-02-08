@@ -50,9 +50,14 @@ public class PlayerController : MonoBehaviour
 
     private AudioTransitions audioTransitions;
     private Pause pause;
+
+    [Header("Footsteps")]
     public List<AudioClipGroup> footsteps;
     public int currentFloor = 0;  //0 = c, 1 = b, 2 = a
-    public AudioSource audioSource;
+    private AudioSource currentFootstepSource;
+    private float footstepTimer = 0f;
+    public float footstepInterval = 0.5f;
+    
 
     private void Awake()
     {
@@ -158,21 +163,37 @@ public class PlayerController : MonoBehaviour
 
     public void FootstepPlayer()
     {
-        int currentIndexPosition = 0;
-        if (currentFloor == 0 && !audioSource.isPlaying && isMoving)
-        {
-            int numOfClips = footsteps[0].clips.Count;
-            audioSource.clip = footsteps[0].clips[(Random.Range(0, numOfClips))];
-            audioSource.Play();
-        }
-        else if (currentFloor == 1 && !audioSource.isPlaying && isMoving)
-        {
+        if (!isMoving) return;
 
-        }
-        else if (currentFloor == 2 && !audioSource.isPlaying && isMoving)
+        if (footsteps == null || footsteps.Count == 0 || currentFloor >= footsteps.Count)
         {
-
+            Debug.LogWarning("Footstep audio clips not set up correctly.");
+            return;
         }
+
+        footstepTimer += Time.fixedDeltaTime;  // Fixed: was footstepTimer.fixedDeltaTime
+        if (footstepTimer < footstepInterval) return;
+
+        if (currentFootstepSource != null && currentFootstepSource.isPlaying) return;
+
+        AudioClipGroup currentFloorGroup = footsteps[currentFloor];  // Fixed: proper variable declaration
+        if (currentFloorGroup == null || currentFloorGroup.clips.Count == 0)
+        {
+            Debug.LogWarning("Current floor's footstep audio clips not set up.");
+            return;
+        }
+
+        int randomIndex = Random.Range(0, currentFloorGroup.clips.Count);
+        AudioClip selectedClip = currentFloorGroup.clips[randomIndex];
+
+        currentFootstepSource = AudioPool.Instance.GetAudioSource();
+        currentFootstepSource.transform.position = transform.position;
+        currentFootstepSource.clip = selectedClip;
+        currentFootstepSource.volume = isSneaking ? 0.3f : 0.7f;
+        currentFootstepSource.spatialBlend = 1f;
+        currentFootstepSource.Play();
+
+        footstepTimer = 0f;
     }
 
     public void OnMove(InputAction.CallbackContext ctx)
