@@ -15,8 +15,14 @@ public class PauseMenuBehavior : Pause
 
     public void onChangeVolume(float value)
     {
-        volumeText.SetText($"{value.ToString()}");
-        mixer.SetFloat("Master", Mathf.Log10(value) * 20);
+        float shownVolume = value * 100;
+        volumeText.SetText($"{shownVolume.ToString("n0")}");
+        //mixer.SetFloat("Volume", Mathf.Log10(value) * 20);
+        mixer.SetFloat("Volume", Mathf.Log10(value) * 20);
+        if (value == 0)
+        {
+            mixer.SetFloat("Volume", -80);
+        }
 
     }
     public void UnPause()

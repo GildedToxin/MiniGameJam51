@@ -8,6 +8,7 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager Instance;
 
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] List<AudioSource> speakers = new List<AudioSource>();
 
     public bool isDialogueActive = false;
     public DialogueGroup dialogueGroup;
@@ -36,6 +37,12 @@ public class DialogueManager : MonoBehaviour
 
         this.dialogueGroup = dialogueGroup;
         dialogueRoutine = StartCoroutine(PlaySequence());
+    }
+
+    public void AddAudioSource(AudioSource speaker)
+    { 
+        speakers.Add(speaker);
+        Debug.Log("added");
     }
 
     private IEnumerator PlaySequence()
