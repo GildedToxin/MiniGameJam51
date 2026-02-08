@@ -22,7 +22,6 @@ public class AISonarScript : MonoBehaviour
     void Update()
     {
         MovePings();
-        PingOnColliderHit();
         DestroyPings();
     }
 
@@ -75,10 +74,6 @@ public class AISonarScript : MonoBehaviour
         }
     }
 
-    private void PingOnColliderHit()
-    {
-
-    }
     void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Sonar"))
