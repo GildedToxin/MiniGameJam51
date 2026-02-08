@@ -106,7 +106,7 @@ public class SonarScript : MonoBehaviour
 
     private void PlayPingSFX()
     {
-       // player.transform.GetChild(2).GetComponent<AudioSource>().Play(pingSFX);
+       player.transform.GetChild(2).GetChild(1).GetComponent<AudioSource>().Play();
     }
     private void SonarPing()
     {
@@ -122,7 +122,6 @@ public class SonarScript : MonoBehaviour
     {
         //Walking
 
-        PlayPingSFX();
         if (playerController.isMoving && walkTimer <= 0)
         {
             walkTimer = walkCooldown;
@@ -143,7 +142,6 @@ public class SonarScript : MonoBehaviour
     {
         //Random
 
-        
         autoPingTimer -= Time.deltaTime;
 
         if (autoPingTimer <= 0)
