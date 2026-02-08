@@ -126,8 +126,9 @@ public class PlayerController : MonoBehaviour
 
     private void LateUpdate()
     {
-       // if (pause.gameIsPaused == false)
-       // {
+        Debug.Log(pause);
+        if(pause != null && !pause.gameIsPaused)
+        {
             float mouseX = look.x * mouseSensitivity;
             float mouseY = look.y * mouseSensitivity;
 
@@ -139,7 +140,15 @@ public class PlayerController : MonoBehaviour
             // Rotate player horizontally
             transform.Rotate(Vector3.up * mouseX);
             LookDirection();
-       // }
+        }
+        else if(pause != null && pause.gameIsPaused)
+        {
+            Debug.Log("game is paused");
+        }
+        else
+        {
+            Debug.LogWarning("No Pause menu Scrip Located");
+        }
     }
 
 
