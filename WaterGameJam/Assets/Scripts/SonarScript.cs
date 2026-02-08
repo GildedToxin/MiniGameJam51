@@ -29,6 +29,8 @@ public class SonarScript : MonoBehaviour
 
     private float walkCooldown = 0.5f;
     private float walkTimer = 0f;
+    private float autoPingCooldown = 10f;
+    private float autoPingTimer = 0f;
 
     private bool playerIsSneaking = false;
 
@@ -58,6 +60,7 @@ public class SonarScript : MonoBehaviour
         }
 
         PingOnWalk();
+        TimerPing();
     }
 
     void FixedUpdate()
@@ -91,7 +94,7 @@ public class SonarScript : MonoBehaviour
         playerController.sonarEffect = false;
     }
 
-    public void PingOnWalk()
+    private void PingOnWalk()
     {
         if (playerController.isMoving && walkTimer <= 0)
         {
@@ -106,6 +109,17 @@ public class SonarScript : MonoBehaviour
                 abovewaterWalkPings.Add(Instantiate(abovewaterPingPrefab, this.transform.position += new Vector3(0, 25.25f, 0), Quaternion.identity));
                 underwaterWalkPings.Add(Instantiate(underwaterPingPrefab, this.transform.position -= new Vector3(0, 50.5f, 0), Quaternion.identity));
             }
+        }
+    }
+
+    private void TimerPing()
+    {
+        autoPingTimer -= Time.deltaTime;
+        if (autoPingTimer <= 0)
+        {
+            abovewaterPings.Add(Instantiate(abovewaterPingPrefab, this.transform.position += new Vector3(0, 25.25f, 0), Quaternion.identity));
+            underwaterPings.Add(Instantiate(underwaterPingPrefab, this.transform.position -= new Vector3(0, 50.5f, 0), Quaternion.identity));
+            autoPingTimer = autoPingCooldown;
         }
     }
 
