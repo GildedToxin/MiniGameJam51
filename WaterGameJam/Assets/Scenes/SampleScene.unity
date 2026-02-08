@@ -1224,12 +1224,24 @@ PrefabInstance:
       value: Speaker
       objectReference: {fileID: 0}
     - target: {fileID: 5338664385877366350, guid: f2d1b5329f650944c8e2464ab66e6fca, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 5338664385877366350, guid: f2d1b5329f650944c8e2464ab66e6fca, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6351351
+      objectReference: {fileID: 0}
+    - target: {fileID: 5338664385877366350, guid: f2d1b5329f650944c8e2464ab66e6fca, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.39378378
+      objectReference: {fileID: 0}
+    - target: {fileID: 5338664385877366350, guid: f2d1b5329f650944c8e2464ab66e6fca, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.80148673
       objectReference: {fileID: 0}
     - target: {fileID: 5338664385877366350, guid: f2d1b5329f650944c8e2464ab66e6fca, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.036551
+      value: 7.77
       objectReference: {fileID: 0}
     - target: {fileID: 5338664385877366350, guid: f2d1b5329f650944c8e2464ab66e6fca, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1262,6 +1274,10 @@ PrefabInstance:
     - target: {fileID: 5338664385877366350, guid: f2d1b5329f650944c8e2464ab66e6fca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7296328855025625408, guid: f2d1b5329f650944c8e2464ab66e6fca, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 0.59
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2316,6 +2332,26 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1616458658916155781, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
+--- !u!1 &565926707 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1562464506341999404, guid: e040300ee287dbf4d8aef19eb7be1840, type: 3}
+  m_PrefabInstance: {fileID: 1043572394}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &565926711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565926707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26c19ad3b823a974aa768d1116524e86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioTransitions
+  underwater: {fileID: 8578338181684433413, guid: d90610d6f6129894785f5276eb63750c, type: 2}
+  outOfWater: {fileID: 24500006, guid: d90610d6f6129894785f5276eb63750c, type: 2}
+  transitionSpeed: 0.5
 --- !u!1001 &594952364
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3416,7 +3452,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1562464506341999404, guid: e040300ee287dbf4d8aef19eb7be1840, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 565926711}
   m_SourcePrefab: {fileID: 100100000, guid: e040300ee287dbf4d8aef19eb7be1840, type: 3}
 --- !u!1001 &1066416352
 PrefabInstance:
@@ -6138,7 +6177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 67932692194768394, guid: bc8ef2618db9ba94b8d6a378c69c7f93, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.8486004
+      value: -1.53
       objectReference: {fileID: 0}
     - target: {fileID: 67932692194768394, guid: bc8ef2618db9ba94b8d6a378c69c7f93, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6146,7 +6185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 67932692194768394, guid: bc8ef2618db9ba94b8d6a378c69c7f93, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 15.909636
+      value: 12.61
       objectReference: {fileID: 0}
     - target: {fileID: 67932692194768394, guid: bc8ef2618db9ba94b8d6a378c69c7f93, type: 3}
       propertyPath: m_LocalRotation.w
