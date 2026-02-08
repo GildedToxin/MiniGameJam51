@@ -16,7 +16,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Jump",
+                    "name": "Sneak",
                     "type": "Button",
                     "id": "7835b680-0cd8-48f4-a7e6-b7d037ae9d76",
                     "expectedControlType": "",
@@ -166,11 +166,11 @@
                 {
                     "name": "",
                     "id": "7c143455-5767-4d8e-b813-32730ebb6a1c",
-                    "path": "<Keyboard>/space",
+                    "path": "<Keyboard>/leftShift",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Jump",
+                    "action": "Sneak",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -181,7 +181,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Jump",
+                    "action": "Sneak",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
