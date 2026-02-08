@@ -87,8 +87,15 @@ public class SonarScript : MonoBehaviour
         this.transform.position = new Vector3(playerPosition.x, waterHeight, playerPosition.z);
     }
 
+    private void PlayPingSFX()
+    {
+       // player.transform.GetChild(2).GetComponent<AudioSource>().Play(pingSFX);
+    }
     private void SonarPing()
     {
+        //Player
+
+        PlayPingSFX();
         abovewaterPings.Add(Instantiate(abovewaterPingPrefab, this.transform.position += new Vector3(0, 25.25f, 0), Quaternion.identity));
         underwaterPings.Add(Instantiate(underwaterPingPrefab, this.transform.position -= new Vector3(0, 50.5f, 0), Quaternion.identity));
         playerController.sonarEffect = false;
@@ -96,6 +103,9 @@ public class SonarScript : MonoBehaviour
 
     private void PingOnWalk()
     {
+        //Walking
+
+        PlayPingSFX();
         if (playerController.isMoving && walkTimer <= 0)
         {
             walkTimer = walkCooldown;
@@ -114,6 +124,9 @@ public class SonarScript : MonoBehaviour
 
     private void TimerPing()
     {
+        //Random
+
+        PlayPingSFX();
         autoPingTimer -= Time.deltaTime;
         if (autoPingTimer <= 0)
         {
