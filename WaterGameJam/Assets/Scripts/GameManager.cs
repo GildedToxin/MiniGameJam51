@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
 
     public float currentWaterLevel;
 
+    public HUDManager hud;
+
     void Awake()
     {
         if (Instance != null && Instance != this)
