@@ -45,7 +45,14 @@ public class PlayerController : MonoBehaviour
     [HideInInspector] public bool sonarEffect = false;
     [HideInInspector] public bool isMoving = false;
     [HideInInspector] public bool isSneaking = false;
+    [HideInInspector] private bool isUnderwater = false;
 
+    AudioTransitions audioTransitions;
+
+    private void Awake()
+    {
+        audioTransitions = FindAnyObjectByType<AudioTransitions>();
+    }
 
     private void Start()
     {
@@ -57,6 +64,15 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         DepleteOxygen();
+
+        if(isUnderwater)
+        {
+            audioTransitions.overwaterToUnderwater();
+        }
+        else if (!isUnderwater)
+        {
+            audioTransitions.underwaterToOverwater();
+        }
     }
 
     private void FixedUpdate()
