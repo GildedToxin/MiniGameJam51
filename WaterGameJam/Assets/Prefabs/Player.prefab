@@ -361,7 +361,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4714468010491158196}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: OnJump
+        m_MethodName: OnSneak
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

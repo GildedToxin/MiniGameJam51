@@ -59,6 +59,15 @@ public class SonarScript : MonoBehaviour
             Mathf.Clamp(walkTimer, 0, walkCooldown);
         }
 
+        if (playerController.isSneaking)
+        {
+            playerIsSneaking = true;
+        }
+        else
+        {
+            playerIsSneaking = false;
+        }
+
         PingOnWalk();
         TimerPing();
     }
