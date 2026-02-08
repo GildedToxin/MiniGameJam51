@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Oxygen")]
     public float oxygenLevel = 100f;
-    private float oxygenDepletionRate = 5f;
+    private float oxygenDepletionRate = 0f;
 
     [Header("Slope Handling")]
     [SerializeField] private float groundCheckDistance = 1.3f;
