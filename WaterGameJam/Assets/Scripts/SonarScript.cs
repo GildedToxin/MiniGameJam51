@@ -9,7 +9,7 @@ public class SonarScript : MonoBehaviour
     public GameObject player;
     private Transform playerTransform;
     private PlayerController playerController;
-    [SerializeField] private float waterHeight = -3.25f;
+    [SerializeField] public float waterHeight = -3.25f;
 
     [Header("Ping Settings")]
     private float underwaterPingsSpeed = 10f;
