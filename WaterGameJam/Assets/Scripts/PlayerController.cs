@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -47,8 +48,9 @@ public class PlayerController : MonoBehaviour
     [HideInInspector] public bool isSneaking = false;
     public bool isUnderwater = false;
 
-    AudioTransitions audioTransitions;
-    Pause pause;
+    private AudioTransitions audioTransitions;
+    private Pause pause;
+    public List<AudioClipGroup> footsteps;
 
     private void Awake()
     {
@@ -115,6 +117,7 @@ public class PlayerController : MonoBehaviour
 
             // Strong gravity = no float
             rb.AddForce(Vector3.down * extraGravity, ForceMode.Acceleration);
+            FootstepPlayer();
         }
 
         // Clamp fall speed
@@ -151,6 +154,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void FootstepPlayer()
+    {
+
+    }
 
     public void OnMove(InputAction.CallbackContext ctx)
     {

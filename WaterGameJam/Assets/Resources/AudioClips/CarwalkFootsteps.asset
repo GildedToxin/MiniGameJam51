@@ -12,4 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 654bca92b22ef414cb7087da68404b35, type: 3}
   m_Name: CarwalkFootsteps
   m_EditorClassIdentifier: Assembly-CSharp::AudioClipGroup
-  clips: []
+  clips:
+  - {fileID: 8300000, guid: 3276c7a4ff1e1104abfd8bee39d1a4e7, type: 3}
+  - {fileID: 8300000, guid: a08276970e77ce243b7042bf77ea461f, type: 3}
+  - {fileID: 8300000, guid: 852a4592258566c4d8c7b5e500a79858, type: 3}
+  - {fileID: 8300000, guid: 09e8359536d4ebe47b724fbc75f44718, type: 3}
+  - {fileID: 8300000, guid: c835f601421953948833a6e02386c867, type: 3}
+  - {fileID: 8300000, guid: 4fe2b95f9eafec04b9eb12eee88c12fe, type: 3}
+  - {fileID: 8300000, guid: adbcc5e3e7dd53e4fb774958f850968f, type: 3}
+  - {fileID: 8300000, guid: 4028ced3238440743916c5b86aaa7796, type: 3}
+  - {fileID: 8300000, guid: 26cacd4166df7a24a9d5d0079972d222, type: 3}
+  - {fileID: 8300000, guid: 91d1e5a0792797e49acdd259436f65de, type: 3}
+  - {fileID: 8300000, guid: 486a5f46bbb5230418074bdab19c07e7, type: 3}
