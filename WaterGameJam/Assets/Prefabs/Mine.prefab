@@ -10,9 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8474095213721715929}
   - component: {fileID: 6809430738072983162}
-  - component: {fileID: 7576248746851721785}
-  - component: {fileID: 1978388107945109490}
-  - component: {fileID: 1380694259869719065}
+  - component: {fileID: 5556736935156630452}
   m_Layer: 0
   m_Name: Mine
   m_TagString: Untagged
@@ -54,70 +52,19 @@ MonoBehaviour:
   bobHeight: 0.5
   bobSpeed: 0.5
   variation: 0.3
---- !u!54 &7576248746851721785
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5957797398251122639}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 10
-  m_CollisionDetection: 0
---- !u!135 &1978388107945109490
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5957797398251122639}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.38
-  m_Center: {x: 0, y: 2, z: 0}
---- !u!208 &1380694259869719065
-NavMeshObstacle:
+--- !u!114 &5556736935156630452
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5957797398251122639}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 0
-  m_Extents: {x: 0.5, y: 1, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 1
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f371feb030cb29749bd8639d2a69ed11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  minePingPrefab: {fileID: 7204337280887111515, guid: 6927900523f04e340a3b3d7a60ade3d4, type: 3}
 --- !u!1001 &766340194197964149
 PrefabInstance:
   m_ObjectHideFlags: 0
