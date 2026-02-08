@@ -6,7 +6,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Speakers
+  m_Name: World Sound
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 38ab3702e884cef49a9cbaf581a94af0
   m_Children: []
@@ -63,7 +63,7 @@ AudioMixerController:
     - 38ab3702e884cef49a9cbaf581a94af0
     name: View
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: 8578338181684433413}
+  m_TargetSnapshot: {fileID: 24500006}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
