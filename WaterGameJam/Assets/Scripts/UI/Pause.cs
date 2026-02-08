@@ -1,23 +1,21 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
 public class Pause : MonoBehaviour
 {
     public bool gameIsPaused = false;
     public Canvas pauseMenu;
 
-    public void openPauseMenu(InputValue value)
+    public void openPauseMenu()
     {
-        if (value.isPressed)
+        if (gameIsPaused)
         {
-            if (gameIsPaused)
-            {
-                ResumeGame();
-            }
-            else
-            {
-                PauseGame();
-            }
+            ResumeGame();
+        }
+        else
+        {
+            PauseGame();
         }
     }
 
@@ -30,7 +28,7 @@ public class Pause : MonoBehaviour
 
     private void PauseGame()
     {
-        pauseMenu.enabled = true;
+        pauseMenu.enabled=true;
         Time.timeScale = 0f;
         gameIsPaused = true;
     }

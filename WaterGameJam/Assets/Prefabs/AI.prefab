@@ -167,3 +167,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95fde51868afc5543a015469e83807cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  aiPingPrefabAboveWater: {fileID: 8761437772683886060, guid: f40c6e3518bcdd44daf58d9179b56333, type: 3}
+  aiPingPrefabUnderWater: {fileID: 4608706572934994349, guid: d7b0324e23ab53643a268ffb9ba5a60f, type: 3}

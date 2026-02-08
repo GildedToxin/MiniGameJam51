@@ -48,10 +48,12 @@ public class PlayerController : MonoBehaviour
     public bool isUnderwater = false;
 
     AudioTransitions audioTransitions;
+    Pause pause;
 
     private void Awake()
     {
         audioTransitions = FindAnyObjectByType<AudioTransitions>();
+        pause = FindAnyObjectByType<Pause>();
     }
 
     private void Start()
@@ -124,17 +126,20 @@ public class PlayerController : MonoBehaviour
 
     private void LateUpdate()
     {
-        float mouseX = look.x * mouseSensitivity;
-        float mouseY = look.y * mouseSensitivity;
+        if (pause.gameIsPaused == false)
+        {
+            float mouseX = look.x * mouseSensitivity;
+            float mouseY = look.y * mouseSensitivity;
 
-        // Rotate camera vertically
-        xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-        playerCamera.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+            // Rotate camera vertically
+            xRotation -= mouseY;
+            xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+            playerCamera.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
 
-        // Rotate player horizontally
-        transform.Rotate(Vector3.up * mouseX);
-        LookDirection();
+            // Rotate player horizontally
+            transform.Rotate(Vector3.up * mouseX);
+            LookDirection();
+        }
     }
 
 
@@ -145,7 +150,7 @@ public class PlayerController : MonoBehaviour
     }
     public void OnLook(InputAction.CallbackContext ctx)
     {
-        look = ctx.ReadValue<Vector2>();
+            look = ctx.ReadValue<Vector2>();
     }
 
     public void OnSneak(InputAction.CallbackContext ctx)
