@@ -270,4 +270,8 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("Player has died!");
     }
+    public void Respawn()
+    {
+
+    }
 }

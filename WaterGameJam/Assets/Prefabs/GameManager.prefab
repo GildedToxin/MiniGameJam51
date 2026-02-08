@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7377346369115559048}
   - component: {fileID: 6773406928696004366}
   - component: {fileID: 2640769824254108552}
+  - component: {fileID: 6764800018315140156}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -52,6 +53,7 @@ MonoBehaviour:
   hud: {fileID: 0}
   waterLevel: {fileID: 0}
   sonarScript: {fileID: 0}
+  lastTurnedValve: {fileID: 0}
 --- !u!114 &6773406928696004366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,3 +85,69 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Pause
   gameIsPaused: 0
   pauseMenu: {fileID: 0}
+--- !u!114 &6764800018315140156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562464506341999404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+  m_Actions: {fileID: -944628639613478452, guid: 0949c6853a9f8df40be3fe0ee7d8c6d5, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 17210c25-469a-4fcb-aa37-de5ce9adc0e7
+    m_ActionName: 'Gameplay/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7835b680-0cd8-48f4-a7e6-b7d037ae9d76
+    m_ActionName: 'Gameplay/Sneak[/Keyboard/leftShift]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 68a6dfc6-22a8-44ed-9628-7d8b33450a91
+    m_ActionName: 'Gameplay/Interact[/Keyboard/e]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1e1d300f-f08c-4509-983b-0b1b2e4b64dd
+    m_ActionName: 'Gameplay/Look[/Mouse/delta]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5b42b24e-072c-4e36-b6e9-b89f57eac21b
+    m_ActionName: 'Gameplay/Sonar[/Keyboard/q]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2640769824254108552}
+        m_TargetAssemblyTypeName: Pause, Assembly-CSharp
+        m_MethodName: openPauseMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 119d7393-9a44-4e33-9e21-af82fb30df05
+    m_ActionName: 'Gameplay/Pause[/Keyboard/escape]'
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Gameplay
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}

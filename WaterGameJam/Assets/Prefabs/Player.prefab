@@ -318,6 +318,7 @@ MonoBehaviour:
   isMoving: 0
   isSneaking: 0
   isUnderwater: 0
+  footsteps: []
 --- !u!114 &7594448631241085703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -423,6 +424,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 5b42b24e-072c-4e36-b6e9-b89f57eac21b
     m_ActionName: 'Gameplay/Sonar[/Keyboard/q]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 119d7393-9a44-4e33-9e21-af82fb30df05
+    m_ActionName: 'Gameplay/Pause[/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay

@@ -6077,6 +6077,58 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3636444926494113378, guid: fb324f59f20c98040855b7c58ccba293, type: 3}
   m_PrefabInstance: {fileID: 560323967}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &410381469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 410381470}
+  - component: {fileID: 410381471}
+  m_Layer: 0
+  m_Name: GameObject (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &410381470
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410381469}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1460424794}
+  m_LocalEulerAnglesHint: {x: 0, y: -120, z: 0}
+--- !u!114 &410381471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410381469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a59440c49722b074e95d71a3872054fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Valve
+  isLookedAt: 0
+  isInteracting: 0
+  isTurned: 0
+  turnPrecentage: 0
+  turnSpeed: 0
+  looseSpeed: 0
+  valveIndex: 0
+  valveHandle: {fileID: 0}
 --- !u!1001 &412899540
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6781,88 +6833,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 613a8f54ac38e1a4eba0ad5725aa8d40, type: 3}
---- !u!1 &439055766 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1562464506341999404, guid: e040300ee287dbf4d8aef19eb7be1840, type: 3}
-  m_PrefabInstance: {fileID: 726812603}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &439055770 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2640769824254108552, guid: e040300ee287dbf4d8aef19eb7be1840, type: 3}
-  m_PrefabInstance: {fileID: 726812603}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 439055766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a6fb683ec9efec44b6e7df69b511d7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Pause
---- !u!114 &439055771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 439055766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
-  m_Actions: {fileID: -944628639613478452, guid: 0949c6853a9f8df40be3fe0ee7d8c6d5, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 17210c25-469a-4fcb-aa37-de5ce9adc0e7
-    m_ActionName: 'Gameplay/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 7835b680-0cd8-48f4-a7e6-b7d037ae9d76
-    m_ActionName: 'Gameplay/Sneak[/Keyboard/leftShift]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 68a6dfc6-22a8-44ed-9628-7d8b33450a91
-    m_ActionName: 'Gameplay/Interact[/Keyboard/e]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 1e1d300f-f08c-4509-983b-0b1b2e4b64dd
-    m_ActionName: 'Gameplay/Look[/Mouse/delta]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 5b42b24e-072c-4e36-b6e9-b89f57eac21b
-    m_ActionName: 'Gameplay/Sonar[/Keyboard/q]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 439055770}
-        m_TargetAssemblyTypeName: Pause, Assembly-CSharp
-        m_MethodName: openPauseMenu
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 119d7393-9a44-4e33-9e21-af82fb30df05
-    m_ActionName: 'Gameplay/Pause[/Keyboard/escape]'
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Gameplay
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!4 &439354477 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 67baf153cd6ffe14bbe903228fbcdbb6, type: 3}
@@ -8280,6 +8250,58 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8474095213721715929, guid: 613a8f54ac38e1a4eba0ad5725aa8d40, type: 3}
   m_PrefabInstance: {fileID: 567388110}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &521511624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 521511625}
+  - component: {fileID: 521511626}
+  m_Layer: 0
+  m_Name: GameObject (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &521511625
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521511624}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1460424794}
+  m_LocalEulerAnglesHint: {x: 0, y: -120, z: 0}
+--- !u!114 &521511626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521511624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a59440c49722b074e95d71a3872054fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Valve
+  isLookedAt: 0
+  isInteracting: 0
+  isTurned: 0
+  turnPrecentage: 0
+  turnSpeed: 0
+  looseSpeed: 0
+  valveIndex: 0
+  valveHandle: {fileID: 0}
 --- !u!1001 &542523538
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10841,13 +10863,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7377346369115559048, guid: e040300ee287dbf4d8aef19eb7be1840, type: 3}
+      propertyPath: lastTurnedValve
+      value: 
+      objectReference: {fileID: 1460424793}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1562464506341999404, guid: e040300ee287dbf4d8aef19eb7be1840, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 439055771}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e040300ee287dbf4d8aef19eb7be1840, type: 3}
 --- !u!1001 &730442018
 PrefabInstance:
@@ -11169,6 +11192,58 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 613a8f54ac38e1a4eba0ad5725aa8d40, type: 3}
+--- !u!1 &760148315
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 760148316}
+  - component: {fileID: 760148317}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &760148316
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760148315}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1460424794}
+  m_LocalEulerAnglesHint: {x: 0, y: -120, z: 0}
+--- !u!114 &760148317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760148315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a59440c49722b074e95d71a3872054fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Valve
+  isLookedAt: 0
+  isInteracting: 0
+  isTurned: 0
+  turnPrecentage: 0
+  turnSpeed: 0
+  looseSpeed: 0
+  valveIndex: 0
+  valveHandle: {fileID: 0}
 --- !u!1001 &762872135
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11771,10 +11846,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 9081161156878081971, guid: 52f3945e68ed25743925ba329c1fb2f6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1151128321}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52f3945e68ed25743925ba329c1fb2f6, type: 3}
 --- !u!1001 &797594255
 PrefabInstance:
@@ -17599,28 +17671,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9081161156878081971, guid: 52f3945e68ed25743925ba329c1fb2f6, type: 3}
   m_PrefabInstance: {fileID: 794274563}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &1151128321
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1151128316}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &1156696821 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
@@ -20076,6 +20126,58 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1616458658916155781, guid: 9d7c7ecad6271f940ab1dadb95bfdeaf, type: 3}
+--- !u!1 &1350874136
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1350874137}
+  - component: {fileID: 1350874138}
+  m_Layer: 0
+  m_Name: GameObject (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1350874137
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350874136}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1460424794}
+  m_LocalEulerAnglesHint: {x: 0, y: -120, z: 0}
+--- !u!114 &1350874138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350874136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a59440c49722b074e95d71a3872054fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Valve
+  isLookedAt: 0
+  isInteracting: 0
+  isTurned: 0
+  turnPrecentage: 0
+  turnSpeed: 0
+  looseSpeed: 0
+  valveIndex: 0
+  valveHandle: {fileID: 0}
 --- !u!1 &1351869689
 GameObject:
   m_ObjectHideFlags: 0
@@ -21758,6 +21860,62 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7393a72fcc386cd4387919a510f32285, type: 3}
+--- !u!1 &1460424792
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1460424794}
+  - component: {fileID: 1460424793}
+  m_Layer: 0
+  m_Name: DO NOT DELETE PLEASE
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1460424793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460424792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a59440c49722b074e95d71a3872054fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Valve
+  isLookedAt: 0
+  isInteracting: 0
+  isTurned: 0
+  turnPrecentage: 0
+  turnSpeed: 0
+  looseSpeed: 0
+  valveIndex: 0
+  valveHandle: {fileID: 0}
+--- !u!4 &1460424794
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460424792}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.86602443, z: -0, w: 0.5000018}
+  m_LocalPosition: {x: -18.136, y: 3.286, z: 20.603}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 760148316}
+  - {fileID: 410381470}
+  - {fileID: 1350874137}
+  - {fileID: 521511625}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -120, z: 0}
 --- !u!1 &1461256774
 GameObject:
   m_ObjectHideFlags: 0
@@ -31220,3 +31378,4 @@ SceneRoots:
   - {fileID: 1542034332}
   - {fileID: 477955380}
   - {fileID: 1749403787}
+  - {fileID: 1460424794}
