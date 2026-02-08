@@ -143,13 +143,17 @@ public class SonarScript : MonoBehaviour
     {
         //Random
 
-        PlayPingSFX();
+        
         autoPingTimer -= Time.deltaTime;
+
         if (autoPingTimer <= 0)
         {
             abovewaterPings.Add(Instantiate(abovewaterPingPrefab, this.transform.position += new Vector3(0, 25.25f, 0), Quaternion.identity));
             underwaterPings.Add(Instantiate(underwaterPingPrefab, this.transform.position -= new Vector3(0, 50.5f, 0), Quaternion.identity));
             autoPingTimer = autoPingCooldown;
+
+            GameManager.Instance.SonarPing(player.transform.position);
+            PlayPingSFX();
         }
     }
 
