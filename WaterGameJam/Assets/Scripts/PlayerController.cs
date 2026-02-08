@@ -295,4 +295,12 @@ public class PlayerController : MonoBehaviour
     {
 
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("KillBox"))
+        {
+            GameManager.Instance.KillPlayer();
+        }
+    }
 }
