@@ -14,9 +14,6 @@ public class AISonarScript : MonoBehaviour
     [SerializeField] private GameObject aiPingPrefabAboveWater;
     [SerializeField] private GameObject aiPingPrefabUnderWater;
 
-    private float autoPingCooldown = 10f;
-    private float autoPingTimer = 0f;
-
     void Start()
     {
         
@@ -25,7 +22,7 @@ public class AISonarScript : MonoBehaviour
     void Update()
     {
         MovePings();
-        TimerPing();
+        PingOnColliderHit();
         DestroyPings();
     }
 
@@ -78,14 +75,16 @@ public class AISonarScript : MonoBehaviour
         }
     }
 
-    private void TimerPing()
+    private void PingOnColliderHit()
     {
-        autoPingTimer -= Time.deltaTime;
-        if (autoPingTimer <= 0)
+
+    }
+    void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Sonar"))
         {
             aiPingsAboveWater.Add(Instantiate(aiPingPrefabAboveWater, this.transform.position += new Vector3(0, 25.25f + waterHeight - this.transform.position.y, 0), Quaternion.identity));
             aiPingsUnderWater.Add(Instantiate(aiPingPrefabUnderWater, this.transform.position -= new Vector3(0, 16.25f + this.transform.position.y, 0), Quaternion.identity));
-            autoPingTimer = autoPingCooldown;
         }
     }
 }
