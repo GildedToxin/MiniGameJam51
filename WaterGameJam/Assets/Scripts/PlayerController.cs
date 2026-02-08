@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Audio;
 using static UnityEngine.Rendering.DebugUI;
 
 
@@ -53,6 +54,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Footsteps")]
     public List<AudioClipGroup> footsteps;
+    public AudioMixerGroup worldSoundMixerGroup;
     public int currentFloor = 0;  //0 = c, 1 = b, 2 = a
     private AudioSource currentFootstepSource;
     private float footstepTimer = 0f;
@@ -187,6 +189,7 @@ public class PlayerController : MonoBehaviour
         AudioClip selectedClip = currentFloorGroup.clips[randomIndex];
 
         currentFootstepSource = AudioPool.Instance.GetAudioSource();
+        currentFootstepSource.outputAudioMixerGroup = worldSoundMixerGroup;
         currentFootstepSource.transform.position = transform.position;
         currentFootstepSource.clip = selectedClip;
         currentFootstepSource.volume = isSneaking ? 0.3f : 0.7f;

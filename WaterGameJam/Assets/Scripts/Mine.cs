@@ -16,6 +16,8 @@ public class Mine : MonoBehaviour
     private float actualBobSpeed;
     private float actualBobHeight;
 
+    public AudioSource audioSource;
+
     void Start()
     {
         foreach (Transform child in transform)
@@ -53,6 +55,7 @@ public class Mine : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            audioSource.Play();
             GameManager.Instance.KillPlayer();
             //Destroy(gameObject);
         }
