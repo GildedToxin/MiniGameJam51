@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -29,6 +30,10 @@ public class WaterLevel : MonoBehaviour
     public GameObject BSlope1;
     public GameObject BigPlane;
 
+    public float waterRiseDuration = 2f; // seconds
+    private Coroutine waterCoroutine;
+
+
     private void Start()
     {
         GameManager.Instance.waterLevel = this;
@@ -48,22 +53,53 @@ public class WaterLevel : MonoBehaviour
         }
         if (newWaterLevel == 3)
         {
-            BSlope1.SetActive(true);
+           // BSlope1.SetActive(true);
         }
         else
         {
             BSlope1.SetActive(false);
         }
 
-        if (newWaterLevel != 0 && newWaterLevel != 3)
+
+        float targetY = values[newWaterLevel];
+
+        if (waterCoroutine != null)
+            StopCoroutine(waterCoroutine);
+
+        waterCoroutine = StartCoroutine(MoveWaterPlane(targetY));
+
+        // BigPlane.transform.position = new Vector3(BigPlane.transform.position.x, values[newWaterLevel], BigPlane.transform.transform.position.z);
+    }
+    IEnumerator MoveWaterPlane(float targetY)
+    {
+        if (GameManager.Instance.currentWaterLevel != 3 && GameManager.Instance.currentWaterLevel != 0)
         {
             BigPlane.SetActive(true);
+            BSlope1.SetActive(false);
+            CSlope1.SetActive(false);
+            CSlope2.SetActive(false);
         }
-        else
+        Vector3 startPos = BigPlane.transform.position;
+        Vector3 targetPos = new Vector3(startPos.x, targetY, startPos.z);
+
+        float elapsed = 0f;
+
+        while (elapsed < waterRiseDuration)
         {
-            BigPlane.SetActive(false);
+            elapsed += Time.deltaTime;
+            float t = elapsed / waterRiseDuration;
+
+            BigPlane.transform.position = Vector3.Lerp(startPos, targetPos, t);
+            yield return null;
         }
 
-            BigPlane.transform.position = new Vector3(BigPlane.transform.position.x, values[newWaterLevel], BigPlane.transform.transform.position.z);
+        BigPlane.transform.position = targetPos; // snap exactly at the end
+
+        if(GameManager.Instance.currentWaterLevel == 3)
+        {
+            BigPlane.SetActive(false);
+            BSlope1.SetActive(true);
+        }
     }
+
 }
