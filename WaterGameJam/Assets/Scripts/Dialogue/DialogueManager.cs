@@ -31,10 +31,14 @@ public class DialogueManager : MonoBehaviour
 
     public void PlayDialogueSequence(DialogueGroup dialogueGroup)
     {
-        AudioSource audioSource = speakers[0].GetComponent<AudioSource>(); ;
+        //AudioSource audioSource = speakers[0].GetComponent<AudioSource>(); ;
         if (dialogueRoutine != null)
             StopCoroutine(dialogueRoutine);
 
+        this.dialogueGroup = dialogueGroup;
+        dialogueRoutine = StartCoroutine(PlaySequence());
+
+        /*
         if (!audioSource.isPlaying)
         {
             for (int i = 0; i < speakers.Count; i++)
@@ -43,7 +47,7 @@ public class DialogueManager : MonoBehaviour
                 audioSource = speakers[i].GetComponent<AudioSource>();
                 dialogueRoutine = StartCoroutine(PlaySequence(audioSource));
             }
-        }
+        }*/
     }
 
     public void AddAudioSource(GameObject speaker, Speakers script)
@@ -51,20 +55,34 @@ public class DialogueManager : MonoBehaviour
         speakers.Add(speaker);
     }
 
-    private IEnumerator PlaySequence(AudioSource audioSource)
+    private IEnumerator PlaySequence()
     {
         currentLineIndex = 0;
         foreach (AudioClip clip in dialogueGroup.audioClips)
         {
-            audioSource.clip = clip;
-            audioSource.Play();
+            foreach(GameObject speaker in speakers)
+            {
+                speaker.GetComponent<AudioSource>().clip = clip;
+                speaker.GetComponent<AudioSource>().Play();
+            }
+            //audioSource.clip = clip;
+            //audioSource.Play();
 
             dialogueLineRunner.text.text = dialogueGroup.lines[currentLineIndex];
 
             currentLineIndex++;
 
             // Wait until this clip finishes
-            yield return new WaitWhile(() => audioSource.isPlaying);
+            yield return new WaitWhile(() => {
+
+                foreach(GameObject speaker in speakers)
+                {
+                    if (speaker.GetComponent<AudioSource>().isPlaying)
+                        return true;
+                }
+
+                return false;
+                });
         }
 
         Debug.Log("Dialogue sequence finished");
