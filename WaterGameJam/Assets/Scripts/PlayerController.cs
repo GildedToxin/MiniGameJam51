@@ -161,10 +161,17 @@ public class PlayerController : MonoBehaviour
         int currentIndexPosition = 0;
         if (currentFloor == 0 && !audioSource.isPlaying && isMoving)
         {
-            Debug.Log(currentIndexPosition);
             int numOfClips = footsteps[0].clips.Count;
             audioSource.clip = footsteps[0].clips[(Random.Range(0, numOfClips))];
             audioSource.Play();
+        }
+        else if (currentFloor == 1 && !audioSource.isPlaying && isMoving)
+        {
+
+        }
+        else if (currentFloor == 2 && !audioSource.isPlaying && isMoving)
+        {
+
         }
     }
 
