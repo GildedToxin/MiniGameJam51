@@ -7,8 +7,7 @@ public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance;
 
-    [SerializeField] private AudioSource audioSource;
-    [SerializeField] List<AudioSource> speakers = new List<AudioSource>();
+    [SerializeField] public List<GameObject> speakers = new List<GameObject>();
 
     public bool isDialogueActive = false;
     public DialogueGroup dialogueGroup;
@@ -32,17 +31,28 @@ public class DialogueManager : MonoBehaviour
 
     public void PlayDialogueSequence(DialogueGroup dialogueGroup)
     {
+        //AudioSource audioSource = speakers[0].GetComponent<AudioSource>(); ;
         if (dialogueRoutine != null)
             StopCoroutine(dialogueRoutine);
 
         this.dialogueGroup = dialogueGroup;
         dialogueRoutine = StartCoroutine(PlaySequence());
+
+        /*
+        if (!audioSource.isPlaying)
+        {
+            for (int i = 0; i < speakers.Count; i++)
+            {
+                this.dialogueGroup = dialogueGroup;
+                audioSource = speakers[i].GetComponent<AudioSource>();
+                dialogueRoutine = StartCoroutine(PlaySequence(audioSource));
+            }
+        }*/
     }
 
-    public void AddAudioSource(AudioSource speaker)
-    { 
+    public void AddAudioSource(GameObject speaker, Speakers script)
+    {
         speakers.Add(speaker);
-        Debug.Log("added");
     }
 
     private IEnumerator PlaySequence()
@@ -50,15 +60,29 @@ public class DialogueManager : MonoBehaviour
         currentLineIndex = 0;
         foreach (AudioClip clip in dialogueGroup.audioClips)
         {
-            audioSource.clip = clip;
-            audioSource.Play();
+            foreach(GameObject speaker in speakers)
+            {
+                speaker.GetComponent<AudioSource>().clip = clip;
+                speaker.GetComponent<AudioSource>().Play();
+            }
+            //audioSource.clip = clip;
+            //audioSource.Play();
 
             dialogueLineRunner.text.text = dialogueGroup.lines[currentLineIndex];
 
             currentLineIndex++;
 
             // Wait until this clip finishes
-            yield return new WaitWhile(() => audioSource.isPlaying);
+            yield return new WaitWhile(() => {
+
+                foreach(GameObject speaker in speakers)
+                {
+                    if (speaker.GetComponent<AudioSource>().isPlaying)
+                        return true;
+                }
+
+                return false;
+                });
         }
 
         Debug.Log("Dialogue sequence finished");

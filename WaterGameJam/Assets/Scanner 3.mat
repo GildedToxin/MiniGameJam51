@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Scanner 2
+  m_Name: Scanner 3
   m_Shader: {fileID: -6465566751694194690, guid: 5979b0a96b8f9d749b921f48caebbdde, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -43,7 +43,7 @@ Material:
     - _RANGE: 0
     - _Range: 1.47
     m_Colors:
-    - _Color: {r: 1, g: 0, b: 0.037613392, a: 0}
+    - _Color: {r: 1, g: 0.42313176, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &5778623072682134391

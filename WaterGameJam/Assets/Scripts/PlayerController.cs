@@ -44,7 +44,15 @@ public class PlayerController : MonoBehaviour
     
     [HideInInspector] public bool sonarEffect = false;
     [HideInInspector] public bool isMoving = false;
+    [HideInInspector] public bool isSneaking = false;
+    public bool isUnderwater = false;
 
+    AudioTransitions audioTransitions;
+
+    private void Awake()
+    {
+        audioTransitions = FindAnyObjectByType<AudioTransitions>();
+    }
 
     private void Start()
     {
@@ -56,6 +64,15 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         DepleteOxygen();
+
+        if(isUnderwater)
+        {
+            audioTransitions.overwaterToUnderwater();
+        }
+        else if (!isUnderwater)
+        {
+            audioTransitions.underwaterToOverwater();
+        }
     }
 
     private void FixedUpdate()
@@ -131,12 +148,10 @@ public class PlayerController : MonoBehaviour
         look = ctx.ReadValue<Vector2>();
     }
 
-    public void OnJump(InputAction.CallbackContext ctx)
+    public void OnSneak(InputAction.CallbackContext ctx)
     {
-        if (!ctx.started) return;
-        if (!isGrounded) return;
-
-        rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
+        isSneaking = ctx.performed;
+        moveSpeed = isSneaking ? 5 : 10;
     }
     void CheckGrounded()
     {

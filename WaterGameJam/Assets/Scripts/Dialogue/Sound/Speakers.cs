@@ -2,20 +2,20 @@ using UnityEngine;
 
 public class Speakers : MonoBehaviour
 {
-    public AudioSource speaker;
+    public AudioSource soundSource;
     public DialogueManager dm;
     public GameObject manager;
+    public GameObject Speaker;
 
     private void Awake()
     {
         dm = FindAnyObjectByType<DialogueManager>();
-        speaker = FindAnyObjectByType<AudioSource>();
+        soundSource = GetComponent<AudioSource>();
+        Speaker = this.gameObject;
     }
     private void Start()
     {
-        Debug.Log(dm);
-        Debug.Log(speaker);
-        dm.AddAudioSource(speaker);
-    }    
+        dm.AddAudioSource(Speaker, this);
+    }   
 
 }

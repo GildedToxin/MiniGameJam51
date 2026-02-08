@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 
     public  List<GameObject> enemies = new List<GameObject>();
 
+    public float currentWaterLevel;
 
     void Awake()
     {

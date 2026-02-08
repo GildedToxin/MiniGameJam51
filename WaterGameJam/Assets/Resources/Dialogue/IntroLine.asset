@@ -22,11 +22,11 @@ MonoBehaviour:
   - FLOOR,,,EPLISON ,,, FOXTROT,,, ERROR, MISSING VALUE
   - ENGAGING SURVIVOR PROTOCOL
   audioClips:
-  - {fileID: 8300000, guid: 2d42d9abc25857d4992b6df71b390056, type: 3}
-  - {fileID: 8300000, guid: 1909d44963e769b48bee017fd41cb11d, type: 3}
-  - {fileID: 8300000, guid: b2a172d558197af4b92eed649dab31c3, type: 3}
-  - {fileID: 8300000, guid: 991d8b60d5889214aa0cec1a959d3f9e, type: 3}
-  - {fileID: 8300000, guid: 1909d44963e769b48bee017fd41cb11d, type: 3}
-  - {fileID: 8300000, guid: 2d42d9abc25857d4992b6df71b390056, type: 3}
-  - {fileID: 8300000, guid: 991d8b60d5889214aa0cec1a959d3f9e, type: 3}
-  - {fileID: 8300000, guid: b2a172d558197af4b92eed649dab31c3, type: 3}
+  - {fileID: 8300000, guid: 4102a53559b2423439075f22dff03c9f, type: 3}
+  - {fileID: 8300000, guid: 57b6f704eaadd454bae7b3d91b69ccdb, type: 3}
+  - {fileID: 8300000, guid: 7ee8f9cc0ffe4e248a6e886b7e8a857e, type: 3}
+  - {fileID: 8300000, guid: 446105379565e5142b8faa5a99baa7f2, type: 3}
+  - {fileID: 8300000, guid: 9230357dfb733954c9311d3f92339d40, type: 3}
+  - {fileID: 8300000, guid: 32b49b0c6e350dc4dbf8790e7dea03ab, type: 3}
+  - {fileID: 8300000, guid: 45d6e5398e2b36843abdc1f2750ad2a9, type: 3}
+  - {fileID: 8300000, guid: ea02d32177277b848b0e9a47b5f2af83, type: 3}
