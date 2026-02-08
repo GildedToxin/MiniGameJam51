@@ -126,8 +126,8 @@ public class PlayerController : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (pause.gameIsPaused == false)
-        {
+       // if (pause.gameIsPaused == false)
+       // {
             float mouseX = look.x * mouseSensitivity;
             float mouseY = look.y * mouseSensitivity;
 
@@ -139,7 +139,7 @@ public class PlayerController : MonoBehaviour
             // Rotate player horizontally
             transform.Rotate(Vector3.up * mouseX);
             LookDirection();
-        }
+       // }
     }
 
 

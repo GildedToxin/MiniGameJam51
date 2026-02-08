@@ -10,9 +10,13 @@ public class GameManager : MonoBehaviour
 
     public  List<GameObject> enemies = new List<GameObject>();
 
-    public float currentWaterLevel;
+    public int currentWaterLevel;
 
     public HUDManager hud;
+
+    public WaterLevel waterLevel;
+    public SonarScript sonarScript;
+
 
     void Awake()
     {
@@ -58,5 +62,13 @@ public class GameManager : MonoBehaviour
     public void KillPlayer()
     {
         player.KillPlayer();
+    }
+
+    [ContextMenu("Increase Water Level")]
+    public void IncreaseWaterLevel()
+    {
+        currentWaterLevel++;
+        waterLevel.IncreaseWaterLevel(currentWaterLevel);
+        sonarScript.SetWaterHeight(waterLevel.values[currentWaterLevel]);
     }
 }

@@ -9,7 +9,7 @@ public class SonarScript : MonoBehaviour
     public GameObject player;
     private Transform playerTransform;
     private PlayerController playerController;
-    private float waterHeight = 9f;
+    [SerializeField] private float waterHeight = -3.25f;
 
     [Header("Ping Settings")]
     private float underwaterPingsSpeed = 10f;
@@ -38,6 +38,7 @@ public class SonarScript : MonoBehaviour
     {
         playerTransform = player.transform;
         playerController = player.GetComponent<PlayerController>();
+        GameManager.Instance.sonarScript = this;
     }
 
     void Update()
@@ -90,6 +91,10 @@ public class SonarScript : MonoBehaviour
         }
     }
 
+    public void SetWaterHeight(float height)
+    {
+        waterHeight = height;
+    }
     private void FollowPlayer()
     {
         Vector3 playerPosition = playerTransform.position;

@@ -66,6 +66,7 @@ public class Valve : MonoBehaviour, IPlayerLookTarget
         {
             isTurned = true;
             GameManager.Instance.hud.turn.SetActive(false);
+            GameManager.Instance.IncreaseWaterLevel();
         }
 
             turnPrecentage = Mathf.Clamp(turnPrecentage, 0, 10);
