@@ -45,6 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 077e2b7c02940024cae1a6b09eb1652f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OxygenTank
+  dialogueGroup: {fileID: 11400000, guid: 72068ead076784a44baa9857a686e644, type: 2}
+  spawnRoom: {fileID: 0}
+  blackMat: {fileID: 2100000, guid: e7d0907ca04343f4181355dde6e27ee4, type: 2}
 --- !u!1 &5250048508352891148
 GameObject:
   m_ObjectHideFlags: 0

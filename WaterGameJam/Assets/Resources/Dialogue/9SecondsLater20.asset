@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLine
   lines:
   - 'BIOSCANNER FEEDBACK: TWO POSITIVE'
-  audioClips: []
+  audioClips:
+  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}

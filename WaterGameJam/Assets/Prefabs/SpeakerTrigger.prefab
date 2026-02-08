@@ -66,4 +66,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73c85ff188f329646aaf8188c9625740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
-  dialogueGroup: {fileID: 11400000, guid: 49c95315f17e8b347ab0b64be39009e0, type: 2}
+  dialogueGroup: {fileID: 11400000, guid: dc815752205f2494abdadb066370ede8, type: 2}

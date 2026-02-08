@@ -2,6 +2,7 @@ using System.Diagnostics.Contracts;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using UnityEditor;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,6 +21,10 @@ public class GameManager : MonoBehaviour
 
     public Valve lastTurnedValve;
 
+    public List<DialogueGroup> valveGroups = new List<DialogueGroup>();
+
+    public GameObject door;
+
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -34,6 +39,10 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
        // Cursor.visible = false;
 
+    }
+    private void Start()
+    {
+        DialogueManager.Instance.PlayDialogueSequence(GetComponent<GameIntroDialogue>().introLines);
     }
 
     public void LoadScene(string sceneName)
@@ -83,6 +92,8 @@ public class GameManager : MonoBehaviour
     public void IncreaseWaterLevel()
     {
         currentWaterLevel++;
+
+        DialogueManager.Instance.PlayDialogueSequence(valveGroups[currentWaterLevel - 1]);
         waterLevel.IncreaseWaterLevel(currentWaterLevel);
         sonarScript.SetWaterHeight(waterLevel.values2[currentWaterLevel]);
     }

@@ -11,6 +11,7 @@ public class DialogueTrigger : MonoBehaviour
         if(other.GetComponentInParent<PlayerController>())
         {
             DialogueManager.Instance.PlayDialogueSequence(dialogueGroup);
+            Destroy(this);
         }
     }
 }

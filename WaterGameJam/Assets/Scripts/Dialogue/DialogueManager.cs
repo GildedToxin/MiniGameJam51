@@ -16,6 +16,8 @@ public class DialogueManager : MonoBehaviour
 
     public DialogueLineRunner dialogueLineRunner;
 
+    public DialogueGroup doorDialougeGroup;
+
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -27,6 +29,10 @@ public class DialogueManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(this.gameObject);
         }
+    }
+    private void Start()
+    {
+        dialogueLineRunner.gameObject.SetActive(false);
     }
 
     public void PlayDialogueSequence(DialogueGroup dialogueGroup)
@@ -57,6 +63,7 @@ public class DialogueManager : MonoBehaviour
             //audioSource.clip = clip;
             //audioSource.Play();
 
+            dialogueLineRunner.gameObject.SetActive(true);
             dialogueLineRunner.text.text = dialogueGroup.lines[currentLineIndex];
 
             currentLineIndex++;
@@ -73,7 +80,11 @@ public class DialogueManager : MonoBehaviour
                 return false;
                 });
         }
-
+        if(dialogueGroup == doorDialougeGroup)
+        {
+            GameManager.Instance.door.GetComponent<MoveUp>().enabled = true;
+        }
+        dialogueLineRunner.gameObject.SetActive(false);
         Debug.Log("Dialogue sequence finished");
     }
 }

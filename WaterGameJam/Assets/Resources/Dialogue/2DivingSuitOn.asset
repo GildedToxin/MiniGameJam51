@@ -15,3 +15,35 @@ MonoBehaviour:
   lines:
   - DIVING SUIT FITTED
   - ENGAGING RIG
+  - ERROR
+  - VISUAL APPARATUS FAULTY
+  - ENGAGING SONAR //SPEAKER // MECHANISM
+  - "User, your deepsea optics are damaged and do not meet safe use standards, I
+    will engage your diving suit\u2019s sonar//speaker device."
+  - Do not be alarmed, periodic abrasive sounds may emanate from your person.
+  - This will ensure emergency servicemen can locate you from great distances.
+  - "Refrain from standing near others as it may damage their hearing.\u201D "
+  - User Listen Closely
+  - "The Facility\u2019s integrity has depleted substantially, an SOS signal has
+    been delivered, if no help arrives within\u2026"
+  - "10 MINUTES\u2026"
+  - Please evacuate to the nearest airlock
+  - Any further idling may result in serious injury from imminent total facility
+    collapse
+  - BULKHEAD LOCK DISENGAGED
+  audioClips:
+  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
+  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
+  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
+  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
+  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
+  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
+  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
+  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
+  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
+  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
+  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
+  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
+  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
+  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
+  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}

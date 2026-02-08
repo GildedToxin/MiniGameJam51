@@ -14,6 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLine
   lines:
   - PRESSURE THRESHOLD AT /// 10 /// Percent
-  - "AIRLOCK OPENING\u2026"
-  - "BIOSCANNER FEEDBACK: THREE\u2026 FIVE\u2026TEN\u2026 POSITIVE"
-  audioClips: []
+  audioClips:
+  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}

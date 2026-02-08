@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6773406928696004366}
   - component: {fileID: 2640769824254108552}
   - component: {fileID: 6764800018315140156}
+  - component: {fileID: 3829470768804525807}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -54,6 +55,13 @@ MonoBehaviour:
   waterLevel: {fileID: 0}
   sonarScript: {fileID: 0}
   lastTurnedValve: {fileID: 0}
+  valveGroups:
+  - {fileID: 11400000, guid: 2825b16370762cc4fa869c6129c741f1, type: 2}
+  - {fileID: 11400000, guid: f2c8156ec8b1bd34384906bdc585fb37, type: 2}
+  - {fileID: 11400000, guid: cc8c7a938414e934a81ef5ed352b979c, type: 2}
+  - {fileID: 11400000, guid: 35cf8dd4d74796844859d4960e495cc1, type: 2}
+  - {fileID: 11400000, guid: eed301179b888bb43ad488c276dc69cb, type: 2}
+  door: {fileID: 0}
 --- !u!114 &6773406928696004366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,6 +79,7 @@ MonoBehaviour:
   dialogueGroup: {fileID: 0}
   currentLineIndex: 0
   dialogueLineRunner: {fileID: 0}
+  doorDialougeGroup: {fileID: 11400000, guid: 72068ead076784a44baa9857a686e644, type: 2}
 --- !u!114 &2640769824254108552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,3 +160,20 @@ MonoBehaviour:
   m_DefaultActionMap: Gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &3829470768804525807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562464506341999404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bbeaf5328cb9544fa9eec38b8ffb3eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  introLines: {fileID: 11400000, guid: 49c95315f17e8b347ab0b64be39009e0, type: 2}
+  divingSuit: {fileID: 0}
+  maskOn: {fileID: 0}
+  firstPing: {fileID: 0}
+  beforeDoor: {fileID: 0}
