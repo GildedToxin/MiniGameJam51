@@ -34,6 +34,9 @@ public class SonarScript : MonoBehaviour
 
     private bool playerIsSneaking = false;
 
+
+   
+
     void Start()
     {
         playerTransform = player.transform;

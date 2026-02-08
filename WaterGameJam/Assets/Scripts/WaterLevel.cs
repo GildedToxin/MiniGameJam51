@@ -14,6 +14,16 @@ public class WaterLevel : MonoBehaviour
     { 5, 6.2f }
 };
 
+    public Dictionary<int, float> values2 = new Dictionary<int, float>
+{
+    { 0, -3.6f },
+    { 1, -2.4f },
+    { 2, -1.75f },
+    { 3, 2.2f },
+    { 4, 3.65f },
+    { 5, 6.2f }
+};
+
     public GameObject CSlope1;
     public GameObject CSlope2;
     public GameObject BSlope1;

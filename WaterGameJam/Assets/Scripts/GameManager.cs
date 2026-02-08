@@ -69,6 +69,6 @@ public class GameManager : MonoBehaviour
     {
         currentWaterLevel++;
         waterLevel.IncreaseWaterLevel(currentWaterLevel);
-        sonarScript.SetWaterHeight(waterLevel.values[currentWaterLevel]);
+        sonarScript.SetWaterHeight(waterLevel.values2[currentWaterLevel]);
     }
 }
