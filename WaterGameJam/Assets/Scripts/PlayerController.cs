@@ -211,4 +211,9 @@ public class PlayerController : MonoBehaviour
         oxygenLevel += oxyRegen;
         oxygenLevel = Mathf.Clamp(oxygenLevel, 0f, 100f);
     }
+
+    public void KillPlayer()
+    {
+        Debug.Log("Player has died!");
+    }
 }

@@ -51,4 +51,9 @@ public class GameManager : MonoBehaviour
     {
         enemies.Add(enemy);
     }
+
+    public void KillPlayer()
+    {
+        player.KillPlayer();
+    }
 }
