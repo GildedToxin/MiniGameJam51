@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2935209816702932558}
   - component: {fileID: 7377346369115559048}
   - component: {fileID: 6773406928696004366}
+  - component: {fileID: 2640769824254108552}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -47,6 +48,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   player: {fileID: 0}
   enemies: []
+  currentWaterLevel: 0
+  hud: {fileID: 0}
+  waterLevel: {fileID: 0}
+  sonarScript: {fileID: 0}
 --- !u!114 &6773406928696004366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,8 +64,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8963a5cb8e995cb4d8c4a5f6f8e806e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
-  audioSource: {fileID: 0}
+  speakers: []
   isDialogueActive: 0
   dialogueGroup: {fileID: 0}
   currentLineIndex: 0
   dialogueLineRunner: {fileID: 0}
+--- !u!114 &2640769824254108552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562464506341999404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a6fb683ec9efec44b6e7df69b511d7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Pause
+  gameIsPaused: 0
+  pauseMenu: {fileID: 0}
