@@ -23,6 +23,8 @@ public class AISonarScript : MonoBehaviour
     {
         MovePings();
         DestroyPings();
+
+        waterHeight = GameManager.Instance.sonarScript.waterHeight;
     }
 
     private void MovePings()

@@ -25,6 +25,14 @@ public class GameManager : MonoBehaviour
 
     public GameObject door;
 
+    public GameObject firstEnemy;
+    public GameObject secondEnemy;
+    private bool spawnFirstEnemy = false;
+    private bool spawnSecondEnemy = false;
+
+    private float enemySpawnTimer = 0f;
+    private float enemySpawnCooldown = 20f;
+
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -40,6 +48,35 @@ public class GameManager : MonoBehaviour
        // Cursor.visible = false;
 
     }
+
+    void Update()
+    {
+        if (currentWaterLevel == 1 && !spawnFirstEnemy)
+        {
+            Invoke("SpawnEnemy", 20f);
+            spawnFirstEnemy = true;
+        }
+
+        if (currentWaterLevel == 2 && !spawnSecondEnemy)
+        {
+            Invoke("SpawnEnemy", 20f);
+            spawnSecondEnemy = true;
+        }
+    }
+
+    private void SpawnEnemy()
+    {
+        if (currentWaterLevel == 1)
+        {
+            firstEnemy.SetActive(true);
+        }
+        else if (currentWaterLevel == 5)
+        {
+            secondEnemy.SetActive(true);
+        }
+    }
+
+
     private void Start()
     {
         DialogueManager.Instance.PlayDialogueSequence(GetComponent<GameIntroDialogue>().introLines);
