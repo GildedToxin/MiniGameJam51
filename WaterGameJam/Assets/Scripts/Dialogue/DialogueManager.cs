@@ -37,17 +37,6 @@ public class DialogueManager : MonoBehaviour
 
         this.dialogueGroup = dialogueGroup;
         dialogueRoutine = StartCoroutine(PlaySequence());
-
-        /*
-        if (!audioSource.isPlaying)
-        {
-            for (int i = 0; i < speakers.Count; i++)
-            {
-                this.dialogueGroup = dialogueGroup;
-                audioSource = speakers[i].GetComponent<AudioSource>();
-                dialogueRoutine = StartCoroutine(PlaySequence(audioSource));
-            }
-        }*/
     }
 
     public void AddAudioSource(GameObject speaker, Speakers script)

@@ -51,6 +51,8 @@ public class PlayerController : MonoBehaviour
     private AudioTransitions audioTransitions;
     private Pause pause;
     public List<AudioClipGroup> footsteps;
+    public int currentFloor = 0;  //0 = c, 1 = b, 2 = a
+    public AudioSource audioSource;
 
     private void Awake()
     {
@@ -104,6 +106,7 @@ public class PlayerController : MonoBehaviour
 
             // Ground stick
             rb.AddForce(Vector3.down * 30f, ForceMode.Acceleration);
+            FootstepPlayer();
         }
         else
         {
@@ -117,7 +120,6 @@ public class PlayerController : MonoBehaviour
 
             // Strong gravity = no float
             rb.AddForce(Vector3.down * extraGravity, ForceMode.Acceleration);
-            FootstepPlayer();
         }
 
         // Clamp fall speed
@@ -156,7 +158,14 @@ public class PlayerController : MonoBehaviour
 
     public void FootstepPlayer()
     {
-
+        int currentIndexPosition = 0;
+        if (currentFloor == 0 && !audioSource.isPlaying && isMoving)
+        {
+            Debug.Log(currentIndexPosition);
+            int numOfClips = footsteps[0].clips.Count;
+            audioSource.clip = footsteps[0].clips[(Random.Range(0, numOfClips))];
+            audioSource.Play();
+        }
     }
 
     public void OnMove(InputAction.CallbackContext ctx)
