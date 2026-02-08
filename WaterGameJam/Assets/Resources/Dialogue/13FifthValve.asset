@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f69f9b577b6ea204b9bddbeac961fe9a, type: 3}
-  m_Name: DivingSuitOn
+  m_Name: 13FifthValve
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLine
   lines:
-  - DIVING SUIT FITTED
-  - ENGAGING RIG
+  - PRESSURE THRESHOLD AT /// 100 /// Percent
+  audioClips: []

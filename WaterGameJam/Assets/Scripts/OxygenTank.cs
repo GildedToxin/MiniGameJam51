@@ -4,6 +4,8 @@ public class OxygenTank : MonoBehaviour, IPlayerLookTarget
 {
     bool isLookedAt = false;
     bool isInteracting = false;
+
+    DialogueGroup dialogueGroup;
     public void OnLookEnter()
     {
         isLookedAt = true;
@@ -15,8 +17,10 @@ public class OxygenTank : MonoBehaviour, IPlayerLookTarget
     public void Interact()
     {
         isInteracting = true;
-        GameManager.Instance.player.RestoreOxygen();
         Destroy(gameObject);
+
+
+
     }
     public void StopInteract()
     {

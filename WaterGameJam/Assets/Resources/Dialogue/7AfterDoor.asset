@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f69f9b577b6ea204b9bddbeac961fe9a, type: 3}
+  m_Name: 7AfterDoor
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueLine
+  lines:
+  - WARNING AIRLOCK PISTONS FAULTY
+  - User, you must locate,,, FIVE,,, pressure valves throughout the facility to equalize
+    the pressure and to prevent the implosion of the facility
+  - ONE is on Floor ALPHA
+  - TWO are on Floor BETA
+  - "Beware of flooding, Limited O2 Tanks can be found scattered throughout all levels,
+    but that is not all\u201D"
+  - Beware of drifting naval contact IEDs, my facility scans show electronics rigged
+    with plastic explosives near the lower levels, setting one off will likely disable
+    your suit and cause a premature implosion of the facility, so tread lightly.
+  audioClips: []

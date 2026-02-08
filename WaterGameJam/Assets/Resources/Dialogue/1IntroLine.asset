@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f69f9b577b6ea204b9bddbeac961fe9a, type: 3}
-  m_Name: IntroLine
+  m_Name: 1IntroLine
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLine
   lines:
   - 'BIOSCANNER FEEDBACK: ONE POSITIVE'
@@ -21,6 +21,8 @@ MonoBehaviour:
   - FLOODING PARAMETERS ON FLOOR,,, CHARLIE,,,, DELTA,,, WATER DETECTED
   - FLOOR,,,EPLISON ,,, FOXTROT,,, ERROR, MISSING VALUE
   - ENGAGING SURVIVOR PROTOCOL
+  - User, equip the facility issued diving suit stationed in the room.
+  - Further instruction will be given after the suit has been equipped
   audioClips:
   - {fileID: 8300000, guid: 4102a53559b2423439075f22dff03c9f, type: 3}
   - {fileID: 8300000, guid: 57b6f704eaadd454bae7b3d91b69ccdb, type: 3}
