@@ -41,8 +41,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float extraGravity = 25f;
     [SerializeField] private float maxFallSpeed = -20f;
 
-    [HideInInspector]
-    public bool sonarEffect = false;
+    
+    [HideInInspector] public bool sonarEffect = false;
+    [HideInInspector] public bool isMoving = false;
 
 
     private void Start()
@@ -123,6 +124,7 @@ public class PlayerController : MonoBehaviour
     public void OnMove(InputAction.CallbackContext ctx)
     {
         movement = new Vector3(ctx.ReadValue<Vector2>().x, 0, ctx.ReadValue<Vector2>().y);
+        isMoving = ctx.ReadValue<Vector2>().magnitude > 0;
     }
     public void OnLook(InputAction.CallbackContext ctx)
     {

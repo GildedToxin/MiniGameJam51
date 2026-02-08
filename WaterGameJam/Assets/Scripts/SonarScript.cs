@@ -12,8 +12,8 @@ public class SonarScript : MonoBehaviour
     private float waterHeight = 9f;
 
     [Header("Ping Settings")]
-    private float underwaterPingsSpeed = 5f;
-    private float abovewaterPingsSpeed = 20f;
+    private float underwaterPingsSpeed = 7f;
+    private float abovewaterPingsSpeed = 15f;
     private List<GameObject> underwaterWalkPings = new List<GameObject>();
     private List<GameObject> abovewaterWalkPings = new List<GameObject>();
     private List<GameObject> underwaterSneakPings = new List<GameObject>();
@@ -24,8 +24,11 @@ public class SonarScript : MonoBehaviour
     [SerializeField] private GameObject underwaterPingPrefab;
     [SerializeField] private GameObject abovewaterPingPrefab;
     private float pingSizeDeathThreshold = 30f;
-    private float pingSizeDeathThresholdSneaking = 5f;
-    private float pingSizeDeathThresholdWalking = 10f;
+    private float pingSizeDeathThresholdSneaking = 2.5f;
+    private float pingSizeDeathThresholdWalking = 5f;
+
+    private float walkCooldown = 0.5f;
+    private float walkTimer = 0f;
 
     private bool playerIsSneaking = false;
 
@@ -45,6 +48,16 @@ public class SonarScript : MonoBehaviour
         }
 
         DestroyPings();
+        DestroySneakingPings();
+        DestroyWalkingPings();
+
+        if (walkTimer > 0)
+        {
+            walkTimer -= Time.deltaTime;
+            Mathf.Clamp(walkTimer, 0, walkCooldown);
+        }
+
+        PingOnWalk();
     }
 
     void FixedUpdate()
@@ -52,6 +65,16 @@ public class SonarScript : MonoBehaviour
         if (underwaterPings.Count > 0 || abovewaterPings.Count > 0)
         {
             MovePings();
+        }
+
+        if (underwaterSneakPings.Count > 0 || abovewaterSneakPings.Count > 0)
+        {
+            MoveSneakingPings();
+        }
+
+        if (underwaterWalkPings.Count > 0 || abovewaterWalkPings.Count > 0)
+        {
+            MoveWalkingPings();
         }
     }
 
@@ -66,6 +89,24 @@ public class SonarScript : MonoBehaviour
         abovewaterPings.Add(Instantiate(abovewaterPingPrefab, this.transform.position += new Vector3(0, 25.25f, 0), Quaternion.identity));
         underwaterPings.Add(Instantiate(underwaterPingPrefab, this.transform.position -= new Vector3(0, 50.5f, 0), Quaternion.identity));
         playerController.sonarEffect = false;
+    }
+
+    public void PingOnWalk()
+    {
+        if (playerController.isMoving && walkTimer <= 0)
+        {
+            walkTimer = walkCooldown;
+            if (playerIsSneaking)
+            {
+                abovewaterSneakPings.Add(Instantiate(abovewaterPingPrefab, this.transform.position += new Vector3(0, 25.25f, 0), Quaternion.identity));
+                underwaterSneakPings.Add(Instantiate(underwaterPingPrefab, this.transform.position -= new Vector3(0, 50.5f, 0), Quaternion.identity));
+            }
+            else
+            {
+                abovewaterWalkPings.Add(Instantiate(abovewaterPingPrefab, this.transform.position += new Vector3(0, 25.25f, 0), Quaternion.identity));
+                underwaterWalkPings.Add(Instantiate(underwaterPingPrefab, this.transform.position -= new Vector3(0, 50.5f, 0), Quaternion.identity));
+            }
+        }
     }
 
     private void MovePings()
@@ -198,7 +239,7 @@ public class SonarScript : MonoBehaviour
     {
         for (int i = underwaterWalkPings.Count - 1; i >= 0; i--)
         {
-            if (underwaterSneakPings[i].transform.localScale.x >= pingSizeDeathThresholdWalking)
+            if (underwaterWalkPings[i].transform.localScale.x >= pingSizeDeathThresholdWalking)
             {
                 Destroy(underwaterWalkPings[i]);
                 underwaterWalkPings.RemoveAt(i);
@@ -207,7 +248,7 @@ public class SonarScript : MonoBehaviour
 
         for (int i = abovewaterWalkPings.Count - 1; i >= 0; i--)
         {
-            if (abovewaterSneakPings[i].transform.localScale.x >= pingSizeDeathThresholdWalking)
+            if (abovewaterWalkPings[i].transform.localScale.x >= pingSizeDeathThresholdWalking)
             {
                 Destroy(abovewaterWalkPings[i]);
                 abovewaterWalkPings.RemoveAt(i);
