@@ -111,18 +111,23 @@ public class SonarScript : MonoBehaviour
     private void SonarPing()
     {
         //Player
-
+        if (GameManager.Instance.playerCanPing)
+        {
         PlayPingSFX();
         abovewaterPings.Add(Instantiate(abovewaterPingPrefab, this.transform.position += new Vector3(0, 25.25f, 0), Quaternion.identity));
         underwaterPings.Add(Instantiate(underwaterPingPrefab, this.transform.position -= new Vector3(0, 50.5f, 0), Quaternion.identity));
         playerController.sonarEffect = false;
+        }
+        else
+        {
+            Debug.Log("Player tried to ping, but ping ability is not unlocked yet!");
+        }
     }
 
     private void PingOnWalk()
     {
         //Walking
-
-        if (playerController.isMoving && walkTimer <= 0)
+        if (playerController.isMoving && walkTimer <= 0 && GameManager.Instance.playerCanPing)
         {
             walkTimer = walkCooldown;
             if (playerIsSneaking)
@@ -141,17 +146,19 @@ public class SonarScript : MonoBehaviour
     private void TimerPing()
     {
         //Random
-
-        autoPingTimer -= Time.deltaTime;
-
-        if (autoPingTimer <= 0)
+        if (GameManager.Instance.playerCanPing)
         {
-            abovewaterPings.Add(Instantiate(abovewaterPingPrefab, this.transform.position += new Vector3(0, 25.25f, 0), Quaternion.identity));
-            underwaterPings.Add(Instantiate(underwaterPingPrefab, this.transform.position -= new Vector3(0, 50.5f, 0), Quaternion.identity));
-            autoPingTimer = autoPingCooldown;
+            autoPingTimer -= Time.deltaTime;
 
-            GameManager.Instance.SonarPing(player.transform.position);
-            PlayPingSFX();
+            if (autoPingTimer <= 0)
+            {
+                abovewaterPings.Add(Instantiate(abovewaterPingPrefab, this.transform.position += new Vector3(0, 25.25f, 0), Quaternion.identity));
+                underwaterPings.Add(Instantiate(underwaterPingPrefab, this.transform.position -= new Vector3(0, 50.5f, 0), Quaternion.identity));
+                autoPingTimer = autoPingCooldown;
+
+                GameManager.Instance.SonarPing(player.transform.position);
+                PlayPingSFX();
+            }
         }
     }
 

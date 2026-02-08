@@ -23,7 +23,15 @@ public class DivingSuit : MonoBehaviour, IPlayerLookTarget
         isInteracting = true;
 
         DialogueManager.Instance.PlayDialogueSequence(dialogueGroup);
-        audioSource.Play();
+        try
+        {
+            audioSource.Play();
+        }
+        catch
+        {
+            Debug.Log("Could not play audio source");
+        }
+        
         Destroy(gameObject);
 
         foreach (Renderer r in spawnRoom.GetComponentsInChildren<Renderer>())
@@ -31,6 +39,7 @@ public class DivingSuit : MonoBehaviour, IPlayerLookTarget
             r.material = blackMat;
         }
 
+        GameManager.Instance.playerCanPing = true;
     }
     public void StopInteract()
     {

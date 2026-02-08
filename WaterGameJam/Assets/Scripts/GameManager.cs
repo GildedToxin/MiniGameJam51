@@ -30,8 +30,7 @@ public class GameManager : MonoBehaviour
     private bool spawnFirstEnemy = false;
     private bool spawnSecondEnemy = false;
 
-    private float enemySpawnTimer = 0f;
-    private float enemySpawnCooldown = 20f;
+    public bool playerCanPing = false;
 
     void Awake()
     {

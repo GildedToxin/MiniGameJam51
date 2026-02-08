@@ -32,7 +32,14 @@ public class DialogueManager : MonoBehaviour
     }
     private void Start()
     {
-        dialogueLineRunner.gameObject.SetActive(false);
+        try
+        {
+            dialogueLineRunner.gameObject.SetActive(false);
+        }
+        catch
+        {
+            Debug.Log("Could not find Dialogue Line Runner");
+        }
     }
 
     public void PlayDialogueSequence(DialogueGroup dialogueGroup)
@@ -42,7 +49,14 @@ public class DialogueManager : MonoBehaviour
             StopCoroutine(dialogueRoutine);
 
         this.dialogueGroup = dialogueGroup;
-        dialogueRoutine = StartCoroutine(PlaySequence());
+        try
+        {
+            dialogueRoutine = StartCoroutine(PlaySequence());
+        }
+        catch
+        {
+            Debug.Log("Could not find dialogueRoutine");
+        }
     }
 
     public void AddAudioSource(GameObject speaker, Speakers script)

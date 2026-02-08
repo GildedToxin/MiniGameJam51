@@ -84,7 +84,14 @@ public class PlayerController : MonoBehaviour
         }
         else if (!isUnderwater)
         {
-            audioTransitions.underwaterToOverwater();
+            try
+            {
+                audioTransitions.underwaterToOverwater();
+            }
+            catch
+            {
+                Debug.Log("Could not find Audio Transitions script");
+            }
         }
     }
 
