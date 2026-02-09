@@ -6,12 +6,14 @@ using Unity.VisualScripting;
 
 public class SonarScript : MonoBehaviour
 {
+    [Header("References")]
     public GameObject player;
     private Transform playerTransform;
     private PlayerController playerController;
-    [SerializeField] public float waterHeight = -3.25f;
+    
 
     [Header("Ping Settings")]
+    [SerializeField] public float waterHeight = -3.25f;
     private float underwaterPingsSpeed = 10f;
     private float abovewaterPingsSpeed = 15f;
     private List<GameObject> underwaterWalkPings = new List<GameObject>();
@@ -27,10 +29,13 @@ public class SonarScript : MonoBehaviour
     private float pingSizeDeathThresholdSneaking = 4f;
     private float pingSizeDeathThresholdWalking = 7f;
 
+    [Header("Cooldown Settings")]
     private float walkCooldown = 0.5f;
     private float walkTimer = 0f;
     private float autoPingCooldown = 10f;
     private float autoPingTimer = 0f;
+    private float sonarPingCooldown = 5f;
+    private float sonarPingTimer = 0f;
 
     private bool playerIsSneaking = false;
 
@@ -61,6 +66,12 @@ public class SonarScript : MonoBehaviour
         {
             walkTimer -= Time.deltaTime;
             Mathf.Clamp(walkTimer, 0, walkCooldown);
+        }
+
+        if (sonarPingTimer > 0)
+        {
+            sonarPingTimer -= Time.deltaTime;
+            Mathf.Clamp(sonarPingTimer, 0, sonarPingCooldown);
         }
 
         if (playerController.isSneaking)
@@ -111,16 +122,17 @@ public class SonarScript : MonoBehaviour
     private void SonarPing()
     {
         //Player
-        if (GameManager.Instance.playerCanPing)
+        if (GameManager.Instance.playerCanPing && sonarPingTimer <= 0)
         {
-        PlayPingSFX();
-        abovewaterPings.Add(Instantiate(abovewaterPingPrefab, this.transform.position += new Vector3(0, 25.25f, 0), Quaternion.identity));
-        underwaterPings.Add(Instantiate(underwaterPingPrefab, this.transform.position -= new Vector3(0, 50.5f, 0), Quaternion.identity));
-        playerController.sonarEffect = false;
+            PlayPingSFX();
+            abovewaterPings.Add(Instantiate(abovewaterPingPrefab, this.transform.position += new Vector3(0, 25.25f, 0), Quaternion.identity));
+            underwaterPings.Add(Instantiate(underwaterPingPrefab, this.transform.position -= new Vector3(0, 50.5f, 0), Quaternion.identity));
+            playerController.sonarEffect = false;
+            sonarPingTimer = sonarPingCooldown;
         }
         else
         {
-            Debug.Log("Player tried to ping, but ping ability is not unlocked yet!");
+            Debug.Log("Player tried to ping, but was unable to.");
         }
     }
 
