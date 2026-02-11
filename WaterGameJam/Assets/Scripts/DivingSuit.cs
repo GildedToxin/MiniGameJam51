@@ -38,8 +38,9 @@ public class DivingSuit : MonoBehaviour, IPlayerLookTarget
         {
             r.material = blackMat;
         }
-
+        GameManager.Instance.hasSuit = true;
         GameManager.Instance.playerCanPing = true;
+
     }
     public void StopInteract()
     {

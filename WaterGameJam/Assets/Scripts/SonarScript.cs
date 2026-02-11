@@ -14,8 +14,10 @@ public class SonarScript : MonoBehaviour
 
     [Header("Ping Settings")]
     [SerializeField] public float waterHeight = -3.25f;
-    private float underwaterPingsSpeed = 10f;
-    private float abovewaterPingsSpeed = 15f;
+    [SerializeField] private float underwaterPingsSpeed = 10f;
+    [SerializeField] private float underwaterWalkPingsSpeed = 10f;
+    [SerializeField] private float abovewaterPingsSpeed = 15f;
+    [SerializeField] private float abovewaterWalkPingsSpeed = 15f;
     private List<GameObject> underwaterWalkPings = new List<GameObject>();
     private List<GameObject> abovewaterWalkPings = new List<GameObject>();
     private List<GameObject> underwaterSneakPings = new List<GameObject>();
@@ -30,14 +32,17 @@ public class SonarScript : MonoBehaviour
     private float pingSizeDeathThresholdWalking = 7f;
 
     [Header("Cooldown Settings")]
-    private float walkCooldown = 0.5f;
-    private float walkTimer = 0f;
-    private float autoPingCooldown = 10f;
-    private float autoPingTimer = 0f;
-    private float sonarPingCooldown = 5f;
-    private float sonarPingTimer = 0f;
+    [SerializeField] private float walkCooldown = 0.5f;
+    [SerializeField] private float walkTimer = 0f;
+    [SerializeField] private float autoPingCooldown = 10f;
+    [SerializeField] private float autoPingTimer = 0f;
+    [SerializeField] private float sonarPingCooldown = 5f;
+    [SerializeField] private float sonarPingTimer = 0f;
 
     private bool playerIsSneaking = false;
+
+
+    //public bool hasSuit;
 
 
    
@@ -52,6 +57,9 @@ public class SonarScript : MonoBehaviour
     void Update()
     {
         FollowPlayer();
+        if(playerController.sonarEffect && (!GameManager.Instance.hasSuit || !GameManager.Instance.playerCanPing))  
+            playerController.sonarEffect = false; //turn off sonar effect if player can't ping, even if it was turned on for some reason
+
 
         if (playerController.sonarEffect)
         {
@@ -122,7 +130,7 @@ public class SonarScript : MonoBehaviour
     private void SonarPing()
     {
         //Player
-        if (GameManager.Instance.playerCanPing && sonarPingTimer <= 0)
+        if (GameManager.Instance.hasSuit && GameManager.Instance.playerCanPing && sonarPingTimer <= 0)
         {
             PlayPingSFX();
             abovewaterPings.Add(Instantiate(abovewaterPingPrefab, this.transform.position += new Vector3(0, 25.25f, 0), Quaternion.identity));
@@ -158,7 +166,7 @@ public class SonarScript : MonoBehaviour
     private void TimerPing()
     {
         //Random
-        if (GameManager.Instance.playerCanPing)
+        if (GameManager.Instance.hasSuit && GameManager.Instance.playerCanPing)
         {
             autoPingTimer -= Time.deltaTime;
 
@@ -279,7 +287,7 @@ public class SonarScript : MonoBehaviour
             foreach (GameObject ping in underwaterWalkPings)
             {
                 // increase scale of underwater pings
-                ping.transform.localScale += new Vector3(1, 0, 1) * Time.deltaTime * underwaterPingsSpeed;
+                ping.transform.localScale += new Vector3(1, 0, 1) * Time.deltaTime * underwaterWalkPingsSpeed;
             }
         }
         catch
@@ -291,7 +299,7 @@ public class SonarScript : MonoBehaviour
         {
             foreach (GameObject ping in abovewaterWalkPings)
             {
-                ping.transform.localScale += new Vector3(1, 0, 1) * Time.deltaTime * abovewaterPingsSpeed;
+                ping.transform.localScale += new Vector3(1, 0, 1) * Time.deltaTime * abovewaterWalkPingsSpeed;
             }
         }
         catch

@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: 2DivingSuitOn
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLine
   lines:
-  - DIVING SUIT FITTED
-  - ENGAGING RIG
+  - DIVING SUIT FITTED ENGAGING RIG
   - ERROR
   - VISUAL APPARATUS FAULTY
   - ENGAGING SONAR //SPEAKER // MECHANISM
@@ -32,18 +31,17 @@ MonoBehaviour:
     collapse
   - BULKHEAD LOCK DISENGAGED
   audioClips:
-  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
-  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
-  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
-  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
-  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
-  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
-  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
-  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
-  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
-  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
-  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
-  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
-  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
-  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
-  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
+  - {fileID: 8300000, guid: 171c4af9031f1a54ebe12753707f20f8, type: 3}
+  - {fileID: 8300000, guid: 4eaec9e8fea38a6489f469f515c87d07, type: 3}
+  - {fileID: 8300000, guid: 4b4a739b4809bab44b5ba253f7fc15a7, type: 3}
+  - {fileID: 8300000, guid: 021788398ad1dec4aa8c7cfc25682721, type: 3}
+  - {fileID: 8300000, guid: e8248e071b5733e4da9e9010c6518b99, type: 3}
+  - {fileID: 8300000, guid: d2b173bb41814fe40a41ff0694080053, type: 3}
+  - {fileID: 8300000, guid: 1dde4f0a3af897649ab6be947c6dd6ed, type: 3}
+  - {fileID: 8300000, guid: 93f36347cc35d354cb4502e8270f27e5, type: 3}
+  - {fileID: 8300000, guid: 5092856f18468db43981dd4296452567, type: 3}
+  - {fileID: 8300000, guid: 291a58469ca49b34a86589932fb0d364, type: 3}
+  - {fileID: 8300000, guid: bf9a86c136d881a4b927f2622bb6fb43, type: 3}
+  - {fileID: 8300000, guid: 5867e05d01099e04582aefe345905a58, type: 3}
+  - {fileID: 8300000, guid: 0674aaff37b5aa541b9832fe7cfb680a, type: 3}
+  - {fileID: 8300000, guid: 8fa3c390e39cac0409f48ef9f2306c5a, type: 3}

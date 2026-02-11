@@ -18,15 +18,22 @@ MonoBehaviour:
     the pressure and to prevent the implosion of the facility
   - ONE is on Floor ALPHA
   - TWO are on Floor BETA
+  - And TWO are on Floor CHARLIE
   - "Beware of flooding, Limited O2 Tanks can be found scattered throughout all levels,
     but that is not all\u201D"
-  - Beware of drifting naval contact IEDs, my facility scans show electronics rigged
-    with plastic explosives near the lower levels, setting one off will likely disable
-    your suit and cause a premature implosion of the facility, so tread lightly.
+  - Beware of drifting naval contact IEDs
+  - My facility scans show electronics rigged with plastic explosives near the lower
+    levels, setting one off will likely disable your suit and cause a premature implosion
+    of the facility, so tread lightly.
+  - setting one off will likely disable your suit and cause a premature implosion
+    of the facility, so tread lightly
   audioClips:
-  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
-  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
-  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
-  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
-  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
-  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
+  - {fileID: 8300000, guid: b990fad017630e641a86b5c39e55ee88, type: 3}
+  - {fileID: 8300000, guid: 1182e8d638d174e41bd6480b10a7ba18, type: 3}
+  - {fileID: 8300000, guid: bde16caf33f8142498b0407d09258d00, type: 3}
+  - {fileID: 8300000, guid: 9bd34600448127a4091318b4893f67d0, type: 3}
+  - {fileID: 8300000, guid: 25529e0e7ad462644941452809258c83, type: 3}
+  - {fileID: 8300000, guid: 79c81d435a9264942948b7880231652e, type: 3}
+  - {fileID: 8300000, guid: 1b42a4879e3b54d4db50d1d82b7bc2aa, type: 3}
+  - {fileID: 8300000, guid: fab4c4a7ebfe2d846a3b22e3fd908fee, type: 3}
+  - {fileID: 8300000, guid: d4111959a62555840977bb2398ba8425, type: 3}

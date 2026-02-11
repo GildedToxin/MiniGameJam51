@@ -69,8 +69,8 @@ public class EnemyController : MonoBehaviour
         }
 
         else
-        {
-            print("nothing to do!");
+        {//
+          //  print("nothing to do!");
             agent.isStopped = true;
         }
 
@@ -92,7 +92,7 @@ public class EnemyController : MonoBehaviour
 
     public void ReceiveSonarPing(Vector3 location)
     {
-        print("received ping at " + location);
+       // print("received ping at " + location);
         float distanceToPing = Vector3.Distance(transform.position, location);
 
         if (distanceToPing <= searchDistance)

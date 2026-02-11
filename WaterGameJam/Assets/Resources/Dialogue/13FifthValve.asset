@@ -17,6 +17,6 @@ MonoBehaviour:
   - "AIRLOCK OPENING\u2026"
   - "BIOSCANNER FEEDBACK: THREE\u2026 FIVE\u2026TEN\u2026 POSITIVE"
   audioClips:
-  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
-  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
-  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
+  - {fileID: 8300000, guid: ede721c51a6b3394b8b30a1ce8312c97, type: 3}
+  - {fileID: 8300000, guid: 4f092bf6791a99b439bfd2102b6a69e2, type: 3}
+  - {fileID: 8300000, guid: 0b5c91c85e560de438707a6b6b1455c1, type: 3}

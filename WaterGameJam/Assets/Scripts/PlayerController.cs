@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float maxFallSpeed = -20f;
 
     
-    [HideInInspector] public bool sonarEffect = false;
+    public bool sonarEffect = false;
     [HideInInspector] public bool isMoving = false;
     [HideInInspector] public bool isSneaking = false;
     public bool isUnderwater = false;
@@ -243,11 +243,13 @@ public class PlayerController : MonoBehaviour
 
     public void OnSonar(InputAction.CallbackContext ctx)
     {
-        print("sonar pinged");  
+        print("sonar pinged");
         if (ctx.started)
-            GameManager.Instance.SonarPing(this.transform.position);    
+        {
+            GameManager.Instance.SonarPing(this.transform.position);
 
-        sonarEffect = true;
+            sonarEffect = true;
+        }
     }
 
     public void LookDirection() 

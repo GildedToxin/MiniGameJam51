@@ -32,8 +32,11 @@ public class GameManager : MonoBehaviour
 
     public bool playerCanPing = false;
 
+    public bool hasSuit;
+
     void Awake()
     {
+
         if (Instance != null && Instance != this)
         {
             Destroy(this.gameObject);
@@ -88,7 +91,7 @@ public class GameManager : MonoBehaviour
 
     public void SonarPing(Vector3 location)
     {
-        print("sonar detected at " + location);
+      //  print("sonar detected at " + location);
         foreach (GameObject enemy in enemies)
         {
             if (enemy != null)
