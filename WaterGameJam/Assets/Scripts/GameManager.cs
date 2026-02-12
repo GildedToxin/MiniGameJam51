@@ -1,8 +1,10 @@
+using System.Collections.Generic;
 using System.Diagnostics.Contracts;
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections.Generic;
-using UnityEditor;
+using static UnityEngine.Rendering.DebugUI;
 
 public class GameManager : MonoBehaviour
 {
@@ -55,6 +57,15 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+
+        print(player.transform.position.y);
+        print(waterLevel.values[currentWaterLevel]);
+
+        if(player.transform.position.y > waterLevel.values[currentWaterLevel])
+        {
+            print("Above water");
+        }
+
         if (currentWaterLevel == 1 && !spawnFirstEnemy)
         {
             Invoke("SpawnEnemy", 20f);
