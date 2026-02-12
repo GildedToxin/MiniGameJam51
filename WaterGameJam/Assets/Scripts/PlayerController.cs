@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Movement")]
     private Vector3 movement;
-    [SerializeField] private int moveSpeed = 10;
+    [SerializeField] private float moveSpeed = 10;
     public bool canMove = true;
     public Rigidbody rb;
 
@@ -219,7 +219,7 @@ public class PlayerController : MonoBehaviour
     public void OnSneak(InputAction.CallbackContext ctx)
     {
         isSneaking = ctx.performed;
-        moveSpeed = isSneaking ? 5 : 10;
+        moveSpeed = isSneaking ? 1.5f : 3f;
     }
     void CheckGrounded()
     {

@@ -1,5 +1,8 @@
+using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Audio;
 
 public class EnemyController : MonoBehaviour
 {
@@ -18,7 +21,10 @@ public class EnemyController : MonoBehaviour
 
     private Vector3? targetLocation = null;
 
+    public AudioClipGroup enemySounds;
 
+    public AudioSource currentSource;
+    public AudioMixerGroup worldSoundMixerGroup;
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -29,6 +35,7 @@ public class EnemyController : MonoBehaviour
     private void Start()
     {
         GameManager.Instance.RegisterEnemy(gameObject);
+        StartCoroutine(SoundLoop());
     }
     void Update()
     {
@@ -98,6 +105,25 @@ public class EnemyController : MonoBehaviour
         if (distanceToPing <= searchDistance)
         {
             targetLocation = location;
+        }
+    }
+
+    IEnumerator SoundLoop()
+    {
+        while (true)
+        {
+            currentSource = AudioPool.Instance.GetAudioSource();
+            currentSource.outputAudioMixerGroup = worldSoundMixerGroup;
+            currentSource.transform.position = transform.position;
+            currentSource.clip = enemySounds.clips[UnityEngine.Random.Range(0, enemySounds.clips.Count)];
+            currentSource.volume = .8f;
+            currentSource.spatialBlend = 1f;
+            currentSource.Play();
+
+            float waitTime = UnityEngine.Random.Range(3f, 7f);
+            yield return new WaitForSeconds(waitTime);
+
+            SoundLoop();
         }
     }
 }

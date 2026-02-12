@@ -57,6 +57,7 @@ MonoBehaviour:
   bobSpeed: 0.5
   variation: 0.3
   audioSource: {fileID: 4187632398769579906}
+  explosionSounds: {fileID: 0}
 --- !u!114 &5556736935156630452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,7 +81,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 0
-  m_Extents: {x: 0.5, y: 1.185, z: 0.5}
+  m_Extents: {x: 0.7, y: 1.185, z: 0.7}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1

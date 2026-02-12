@@ -18,12 +18,15 @@ public class Mine : MonoBehaviour
 
     public AudioSource audioSource;
 
+    public AudioClipGroup explosionSounds;
+
     void Start()
     {
         foreach (Transform child in transform)
             child.gameObject.SetActive(false);
 
-        transform.GetChild(Random.Range(0, transform.childCount)).gameObject.SetActive(true);
+        transform.GetChild(Random.Range(0, transform.childCount - 1)).gameObject.SetActive(true);
+        transform.GetChild(3).gameObject.SetActive(true);
 
         transform.rotation = Quaternion.Euler(
             transform.rotation.eulerAngles.x,
@@ -55,6 +58,7 @@ public class Mine : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            audioSource.clip = explosionSounds.clips[Random.Range(0, explosionSounds.clips.Count)];
             audioSource.Play();
             GameManager.Instance.KillPlayer();
             //Destroy(gameObject);

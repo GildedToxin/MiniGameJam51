@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 654bca92b22ef414cb7087da68404b35, type: 3}
+  m_Name: Monster
+  m_EditorClassIdentifier: Assembly-CSharp::AudioClipGroup
+  clips:
+  - {fileID: 8300000, guid: a0e6afe2bd699ae4ab854a37690ee1bf, type: 3}
+  - {fileID: 8300000, guid: fa2c8121b2f9b7e41892a018a6c31bc4, type: 3}
+  - {fileID: 8300000, guid: 6bd09f8a95ef8b9439afd8e96d5ae978, type: 3}
+  - {fileID: 8300000, guid: bdd2e2298ac99fb4990028cf2d206ec1, type: 3}
+  - {fileID: 8300000, guid: adde0bf001a78e6469f27e873b92155e, type: 3}
+  - {fileID: 8300000, guid: 8d42a02d71e03624db9f41e1ca0b0484, type: 3}

@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviour
 
     public bool hasSuit;
 
+
+    public GameObject airLock;
     void Awake()
     {
 
@@ -135,5 +137,11 @@ public class GameManager : MonoBehaviour
         DialogueManager.Instance.PlayDialogueSequence(valveGroups[currentWaterLevel - 1]);
         waterLevel.IncreaseWaterLevel(currentWaterLevel);
         sonarScript.SetWaterHeight(waterLevel.values2[currentWaterLevel]);
+
+        if(currentWaterLevel == 5)
+        {
+           // door.SetActive(false);
+            airLock.SetActive(false);
+        }
     }
 }
