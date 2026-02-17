@@ -12,7 +12,7 @@ public class WaterLevel : MonoBehaviour
     { 2, -2.4f },
     { 3, 2f },
     { 4, 3f },
-    { 5, 6.2f }
+    { 5, 45f }
 };
 
     public Dictionary<int, float> values2 = new Dictionary<int, float>
@@ -22,7 +22,7 @@ public class WaterLevel : MonoBehaviour
     { 2, -1.75f },
     { 3, 2.2f },
     { 4, 3.65f },
-    { 5, 6.2f }
+    { 5, 45f }
 };
 
     public GameObject CSlope1;
@@ -95,7 +95,7 @@ public class WaterLevel : MonoBehaviour
 
         BigPlane.transform.position = targetPos; // snap exactly at the end
 
-        if(GameManager.Instance.currentWaterLevel == 3)
+        if(GameManager.Instance.currentWaterLevel == 3 || GameManager.Instance.currentWaterLevel == 5)
         {
             BigPlane.SetActive(false);
             BSlope1.SetActive(true);
