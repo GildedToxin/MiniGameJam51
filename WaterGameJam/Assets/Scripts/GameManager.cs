@@ -173,4 +173,16 @@ public class GameManager : MonoBehaviour
             airLock.SetActive(false);
         }
     }
+    [ContextMenu("Set Water Level To End")]
+    public void SetToEnd()
+    {
+        hasSuit = true;
+        playerCanPing = true;
+
+        IncreaseWaterLevel();
+        IncreaseWaterLevel();
+        IncreaseWaterLevel();
+        IncreaseWaterLevel();
+        IncreaseWaterLevel();
+    }
 }

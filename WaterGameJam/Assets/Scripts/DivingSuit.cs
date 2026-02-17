@@ -18,6 +18,7 @@ public class DivingSuit : MonoBehaviour, IPlayerLookTarget
     {
         isLookedAt = false;
     }
+    [ContextMenu("Interact")]
     public void Interact()
     {
         isInteracting = true;
