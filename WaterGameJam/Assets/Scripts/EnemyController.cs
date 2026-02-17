@@ -94,7 +94,8 @@ public class EnemyController : MonoBehaviour
     }
     private void AttackPlayer()
     {
-        Debug.Log("Attacking player!");
+        GameManager.Instance.KillPlayer();
+        // NEED TO RESET POS TO NEUTRAL AREA
     }
 
     public void ReceiveSonarPing(Vector3 location)
