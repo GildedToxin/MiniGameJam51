@@ -59,7 +59,8 @@ public class PlayerController : MonoBehaviour
     private AudioSource currentFootstepSource;
     private float footstepTimer = 0f;
     public float footstepInterval = 0.5f;
-    
+
+    public AudioClip playerDied;
 
     private void Awake()
     {
@@ -301,7 +302,13 @@ public class PlayerController : MonoBehaviour
 
     public void KillPlayer()
     {
-        Debug.Log("Player has died!");
+        currentFootstepSource = AudioPool.Instance.GetAudioSource();
+        currentFootstepSource.outputAudioMixerGroup = worldSoundMixerGroup;
+        currentFootstepSource.transform.position = transform.position;
+        currentFootstepSource.clip = playerDied;
+        currentFootstepSource.volume = 0.7f;
+        currentFootstepSource.spatialBlend = 1f;
+        currentFootstepSource.Play();
     }
     public void Respawn()
     {
