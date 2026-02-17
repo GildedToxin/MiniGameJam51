@@ -174,7 +174,7 @@ public class PlayerController : MonoBehaviour
     {
         if (!isMoving) return;
 
-        if (footsteps == null || footsteps.Count == 0 || currentFloor >= footsteps.Count)
+        if (footsteps == null || footsteps.Count == 0)
         {
             Debug.LogWarning("Footstep audio clips not set up correctly.");
             return;
@@ -185,7 +185,7 @@ public class PlayerController : MonoBehaviour
 
         if (currentFootstepSource != null && currentFootstepSource.isPlaying) return;
 
-        AudioClipGroup currentFloorGroup = footsteps[currentFloor];  // Fixed: proper variable declaration
+        AudioClipGroup currentFloorGroup = footsteps[GameManager.Instance.PlayerFootStepLevel];  // Fixed: proper variable declaration
         if (currentFloorGroup == null || currentFloorGroup.clips.Count == 0)
         {
             Debug.LogWarning("Current floor's footstep audio clips not set up.");

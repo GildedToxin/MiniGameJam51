@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
     public bool hasSuit;
 
 
+    public int PlayerFootStepLevel;
     public GameObject airLock;
     void Awake()
     {
@@ -58,13 +59,30 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
-        print(player.transform.position.y);
-        print(waterLevel.values[currentWaterLevel]);
+        //print(player.transform.position.y);
+        //  print(waterLevel.values[currentWaterLevel]);
 
-        if(player.transform.position.y > waterLevel.values[currentWaterLevel])
+
+
+        float difference = player.transform.position.y - waterLevel.values[currentWaterLevel];
+
+        if (difference > .75)
         {
-            print("Above water");
+            Debug.Log("Player is FAR ABOVE");
+            PlayerFootStepLevel = 0;
         }
+        else if (difference > 0)
+        {
+            Debug.Log("Player is BARELY ABOVE");
+            PlayerFootStepLevel = 1;
+        }
+        else if (difference < 0)
+        {
+            Debug.Log("Player is BELOW");
+            PlayerFootStepLevel = 2;
+        }
+        //  print(distance);
+
 
         if (currentWaterLevel == 1 && !spawnFirstEnemy)
         {
