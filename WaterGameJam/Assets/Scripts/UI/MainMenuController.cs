@@ -14,7 +14,7 @@ public class MainMenuController : MonoBehaviour
     }
     public void StartNewGame()
     {
-        GameManager.Instance.LoadScene("SampleScene");
+        GameManager.Instance.LoadScene("Station Kadia");
     }
     public void QuitGame()
     {

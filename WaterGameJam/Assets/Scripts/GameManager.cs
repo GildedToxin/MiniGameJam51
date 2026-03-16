@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-
+        if(SceneManager.GetActiveScene().name != "MainLevel") { return; }
         //print(player.transform.position.y);
         //  print(waterLevel.values[currentWaterLevel]);
 
@@ -97,17 +97,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void SpawnEnemy()
-    {
-        if (currentWaterLevel == 1)
-        {
-            firstEnemy.SetActive(true);
-        }
-        else if (currentWaterLevel == 5)
-        {
-            secondEnemy.SetActive(true);
-        }
-    }
 
 
     private void Start()
@@ -156,6 +145,8 @@ public class GameManager : MonoBehaviour
         }
         player.transform.position = lastTurnedValve.transform.GetChild(3).position;
         player.transform.rotation = lastTurnedValve.transform.GetChild(3).rotation;
+
+        FindFirstObjectByType<EnemyController>()?.SpawnAI();
     }
 
     [ContextMenu("Increase Water Level")]
@@ -166,7 +157,11 @@ public class GameManager : MonoBehaviour
         DialogueManager.Instance.PlayDialogueSequence(valveGroups[currentWaterLevel - 1]);
         waterLevel.IncreaseWaterLevel(currentWaterLevel);
         sonarScript.SetWaterHeight(waterLevel.values2[currentWaterLevel]);
-
+        if(currentWaterLevel == 1)
+        {
+            FindFirstObjectByType<EnemyController>(FindObjectsInactive.Include)?.gameObject.SetActive(true);
+            FindFirstObjectByType<EnemyController>()?.SpawnAI();
+        }
         if(currentWaterLevel == 5)
         {
            // door.SetActive(false);

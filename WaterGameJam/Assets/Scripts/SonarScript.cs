@@ -45,10 +45,16 @@ public class SonarScript : MonoBehaviour
     //public bool hasSuit;
 
 
-   
+    public bool isInMainMenu = false;
 
     void Start()
     {
+        if (isInMainMenu)
+        {
+            this.transform.position = Camera.main.transform.position - new Vector3(0, 0.9f, 0);
+            return;
+        }
+            
         playerTransform = player.transform;
         playerController = player.GetComponent<PlayerController>();
         GameManager.Instance.sonarScript = this;
@@ -56,6 +62,25 @@ public class SonarScript : MonoBehaviour
 
     void Update()
     {
+        if (isInMainMenu)
+        {
+            autoPingTimer -= Time.deltaTime;
+
+            if (autoPingTimer <= 0)
+            {
+                abovewaterPings.Add(Instantiate(abovewaterPingPrefab, this.transform.position += new Vector3(0, 25.25f, 0), Quaternion.identity));
+                underwaterPings.Add(Instantiate(underwaterPingPrefab, this.transform.position -= new Vector3(0, 50.5f, 0), Quaternion.identity));
+                this.transform.position = Camera.main.transform.position - new Vector3(0, 0.9f, 0);
+                autoPingTimer = autoPingCooldown;
+
+
+
+                //GameManager.Instance.SonarPing(Camera.main.transform.position);
+            }
+
+            DestroyPings();
+            return;
+        }
         FollowPlayer();
         if(playerController.sonarEffect && (!GameManager.Instance.hasSuit || !GameManager.Instance.playerCanPing))  
             playerController.sonarEffect = false; //turn off sonar effect if player can't ping, even if it was turned on for some reason

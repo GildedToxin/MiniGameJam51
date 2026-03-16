@@ -22,7 +22,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6139707738680165055
 Transform:
   m_ObjectHideFlags: 0
@@ -161,10 +161,11 @@ MonoBehaviour:
   searchDistance: 50
   chaseDistance: 10
   attackDistance: 1
-  moveSpeed: 3.5
+  moveSpeed: 1.5
   enemySounds: {fileID: 11400000, guid: 0e592e0355101764eb60563d72c0ed14, type: 2}
   currentSource: {fileID: 0}
   worldSoundMixerGroup: {fileID: 0}
+  spawnLocation: {fileID: 0}
 --- !u!195 &4233223937242438325
 NavMeshAgent:
   m_ObjectHideFlags: 0

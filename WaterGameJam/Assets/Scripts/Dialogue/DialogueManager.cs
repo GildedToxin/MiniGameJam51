@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -44,6 +45,10 @@ public class DialogueManager : MonoBehaviour
 
     public void PlayDialogueSequence(DialogueGroup dialogueGroup)
     {
+        if(SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            return;
+        }
         //AudioSource audioSource = speakers[0].GetComponent<AudioSource>(); ;
         if (dialogueRoutine != null)
             StopCoroutine(dialogueRoutine);

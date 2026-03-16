@@ -25,6 +25,8 @@ public class EnemyController : MonoBehaviour
 
     public AudioSource currentSource;
     public AudioMixerGroup worldSoundMixerGroup;
+
+    public Transform spawnLocation;
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -119,6 +121,7 @@ public class EnemyController : MonoBehaviour
             currentSource.clip = enemySounds.clips[UnityEngine.Random.Range(0, enemySounds.clips.Count)];
             currentSource.volume = .8f;
             currentSource.spatialBlend = 1f;
+
             currentSource.Play();
 
             float waitTime = UnityEngine.Random.Range(3f, 7f);
@@ -126,5 +129,10 @@ public class EnemyController : MonoBehaviour
 
             SoundLoop();
         }
+    }
+
+    public void SpawnAI()
+    {
+        this.transform.position = spawnLocation.position;
     }
 }
