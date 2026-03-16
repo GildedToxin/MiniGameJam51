@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainMenuController : MonoBehaviour
@@ -14,7 +15,8 @@ public class MainMenuController : MonoBehaviour
     }
     public void StartNewGame()
     {
-        GameManager.Instance.LoadScene("Station Kadia");
+        SceneManager.LoadScene("Station Kadia");
+        Destroy(GameManager.Instance.gameObject);
     }
     public void QuitGame()
     {

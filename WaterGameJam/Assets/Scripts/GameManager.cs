@@ -48,10 +48,6 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            if(SceneManager.GetActiveScene().name == "MainMenu")
-            {
-                return;
-            }
             Instance = this;
             DontDestroyOnLoad(this.gameObject);
         }
