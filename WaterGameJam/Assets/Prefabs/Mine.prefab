@@ -57,7 +57,7 @@ MonoBehaviour:
   bobSpeed: 0.5
   variation: 0.3
   audioSource: {fileID: 4187632398769579906}
-  explosionSounds: {fileID: 0}
+  explosionSounds: {fileID: 11400000, guid: 838ea7df44adf4c4a85a7c936eb926a0, type: 2}
 --- !u!114 &5556736935156630452
 MonoBehaviour:
   m_ObjectHideFlags: 0

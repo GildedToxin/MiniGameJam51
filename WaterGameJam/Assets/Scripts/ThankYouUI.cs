@@ -1,19 +1,21 @@
-using TMPro;
 using UnityEngine;
 
-public class DialogueLineRunner : MonoBehaviour
+public class ThankYouUI : MonoBehaviour
 {
-
-    public TextMeshProUGUI text;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Awake()
+    void Start()
     {
-        DialogueManager.Instance.dialogueLineRunner = this;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }

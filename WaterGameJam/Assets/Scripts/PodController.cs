@@ -6,6 +6,8 @@ public class PodController : MonoBehaviour, IPlayerLookTarget
 
     public bool isLookedAt = false;
     public bool isInteracted = false;
+
+    public GameObject go;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -30,7 +32,8 @@ public class PodController : MonoBehaviour, IPlayerLookTarget
     public void Interact()
     {
         isInteracted = true;
-
+        go.SetActive(true);
+        Time.timeScale = 0f;
         // End The Game Here
     }
     public void StopInteract()

@@ -19,6 +19,9 @@ public class DialogueManager : MonoBehaviour
 
     public DialogueGroup doorDialougeGroup;
 
+    public AudioClip pingtime;
+    public AudioClip canPing;
+
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -86,6 +89,17 @@ public class DialogueManager : MonoBehaviour
             dialogueLineRunner.text.text = dialogueGroup.lines[currentLineIndex];
 
             currentLineIndex++;
+
+            if (clip == pingtime)
+            {
+                FindAnyObjectByType<SonarScript>().FollowPlayer();
+                FindAnyObjectByType<SonarScript>().SonarPing();
+            }
+            if (clip == canPing)
+            {
+                FindAnyObjectByType<SonarScript>().dialogueWait = false;
+            }
+
 
             // Wait until this clip finishes
             yield return new WaitWhile(() => {

@@ -174,6 +174,7 @@ public class PlayerController : MonoBehaviour
     public void FootstepPlayer()
     {
         if (!isMoving) return;
+        if (!GameManager.Instance.hasSuit) return;
 
         if (footsteps == null || footsteps.Count == 0)
         {

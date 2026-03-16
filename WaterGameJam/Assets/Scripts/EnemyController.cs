@@ -134,5 +134,7 @@ public class EnemyController : MonoBehaviour
     public void SpawnAI()
     {
         this.transform.position = spawnLocation.position;
+        agent.Warp(spawnLocation.position);
+        this.transform.position = spawnLocation.position;
     }
 }

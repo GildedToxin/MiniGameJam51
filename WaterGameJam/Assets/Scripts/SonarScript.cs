@@ -46,6 +46,7 @@ public class SonarScript : MonoBehaviour
 
 
     public bool isInMainMenu = false;
+    public bool dialogueWait = false;
 
     void Start()
     {
@@ -62,6 +63,8 @@ public class SonarScript : MonoBehaviour
 
     void Update()
     {
+        if (dialogueWait)
+            return;
         if (isInMainMenu)
         {
             autoPingTimer -= Time.deltaTime;
@@ -142,7 +145,7 @@ public class SonarScript : MonoBehaviour
     {
         waterHeight = height;
     }
-    private void FollowPlayer()
+    public void FollowPlayer()
     {
         Vector3 playerPosition = playerTransform.position;
         this.transform.position = new Vector3(playerPosition.x, waterHeight, playerPosition.z);
@@ -152,19 +155,23 @@ public class SonarScript : MonoBehaviour
     {
        player.transform.GetChild(2).GetChild(1).GetComponent<AudioSource>().Play();
     }
-    private void SonarPing()
+    public void SonarPing()
     {
         //Player
         if (GameManager.Instance.hasSuit && GameManager.Instance.playerCanPing && sonarPingTimer <= 0)
         {
             PlayPingSFX();
-            abovewaterPings.Add(Instantiate(abovewaterPingPrefab, this.transform.position += new Vector3(0, 25.25f, 0), Quaternion.identity));
+            abovewaterPings.Add(Instantiate(abovewaterPingPrefab, this.transform.position += new Vector3(0, 25.25f, 0), Quaternion.identity)); 
             underwaterPings.Add(Instantiate(underwaterPingPrefab, this.transform.position -= new Vector3(0, 50.5f, 0), Quaternion.identity));
             playerController.sonarEffect = false;
             sonarPingTimer = sonarPingCooldown;
         }
         else
         {
+            if (playerController.sonarEffect)
+            {
+                playerController.sonarEffect = false; //turn off sonar effect if player can't ping, even if it was turned on for some reason
+            }
             Debug.Log("Player tried to ping, but was unable to.");
         }
     }

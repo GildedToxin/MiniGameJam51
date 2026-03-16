@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if(SceneManager.GetActiveScene().name != "MainLevel") { return; }
+        if(SceneManager.GetActiveScene().name == "MainLevel") { return; }
         //print(player.transform.position.y);
         //  print(waterLevel.values[currentWaterLevel]);
 
@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
 
         float difference = player.transform.position.y - waterLevel.values[currentWaterLevel];
 
-        if (difference > .75)
+        if (difference > 1.05f)
         {
             Debug.Log("Player is FAR ABOVE");
             PlayerFootStepLevel = 0;
