@@ -33,7 +33,9 @@ public class PodController : MonoBehaviour, IPlayerLookTarget
     {
         isInteracted = true;
         go.SetActive(true);
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
         // End The Game Here
     }
     public void StopInteract()
