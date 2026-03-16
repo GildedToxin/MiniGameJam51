@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            if(SceneManager.GetActiveScene().name != "MainMenu")
+            if(SceneManager.GetActiveScene().name == "MainMenu")
             {
                 return;
             }
