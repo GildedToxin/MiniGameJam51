@@ -58,12 +58,12 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if(SceneManager.GetActiveScene().name == "MainLevel") { return; }
+        if(SceneManager.GetActiveScene().name == "MainMenu") { return; }
         //print(player.transform.position.y);
         //  print(waterLevel.values[currentWaterLevel]);
 
 
-
+        
         float difference = player.transform.position.y - waterLevel.values[currentWaterLevel];
 
         if (difference > 1.05f)

@@ -98,7 +98,7 @@ public class WaterLevel : MonoBehaviour
         if(GameManager.Instance.currentWaterLevel == 3 || GameManager.Instance.currentWaterLevel == 5)
         {
             BigPlane.SetActive(false);
-            BSlope1.SetActive(true);
+            //BSlope1.SetActive(true);
         }
     }
 
