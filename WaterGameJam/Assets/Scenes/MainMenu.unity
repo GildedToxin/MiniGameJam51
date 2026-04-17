@@ -18188,6 +18188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   isLookedAt: 0
   isInteracted: 0
+  go: {fileID: 0}
 --- !u!64 &1164506998
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -34447,6 +34448,18 @@ PrefabInstance:
       propertyPath: m_Colors.m_HighlightedColor.r
       value: 0.26415092
       objectReference: {fileID: 0}
+    - target: {fileID: 5269275419630632159, guid: a0ca2fbe6877f6748a5cd72980c79680, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 284976068420071882}
+    - target: {fileID: 5269275419630632159, guid: a0ca2fbe6877f6748a5cd72980c79680, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReturnToLauncher
+      objectReference: {fileID: 0}
+    - target: {fileID: 5269275419630632159, guid: a0ca2fbe6877f6748a5cd72980c79680, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ReturnToRicochetLauncher, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 5986737145330345517, guid: a0ca2fbe6877f6748a5cd72980c79680, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -34585,8 +34598,29 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5617805007442704670, guid: a0ca2fbe6877f6748a5cd72980c79680, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1490846171}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1749837841602509407, guid: a0ca2fbe6877f6748a5cd72980c79680, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 284976068420071882}
   m_SourcePrefab: {fileID: 100100000, guid: a0ca2fbe6877f6748a5cd72980c79680, type: 3}
+--- !u!1 &284976068420071881 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1749837841602509407, guid: a0ca2fbe6877f6748a5cd72980c79680, type: 3}
+  m_PrefabInstance: {fileID: 284976068420071880}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &284976068420071882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284976068420071881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd856f49d3de8e845b60472e7809ea47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReturnToRicochetLauncher
+  launcherExe: RicochetLauncher.exe
 --- !u!1001 &5375611397508945306
 PrefabInstance:
   m_ObjectHideFlags: 0
