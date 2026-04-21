@@ -17,6 +17,8 @@ public class PauseUI : MonoBehaviour
     {
         paused = false;
         SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1;
+        paused = false;
     }
     public void resume()
     {
