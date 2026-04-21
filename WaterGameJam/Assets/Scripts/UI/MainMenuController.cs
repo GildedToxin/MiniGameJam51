@@ -12,11 +12,13 @@ public class MainMenuController : MonoBehaviour
     {
       //  EventSystem.current.SetSelectedGameObject(null); // clear old selection
       //  EventSystem.current.SetSelectedGameObject(newGame.gameObject);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
     }
     public void StartNewGame()
     {
         SceneManager.LoadScene("Station Kadia");
-        Destroy(GameManager.Instance.gameObject);
+        //Destroy(GameManager.Instance.gameObject);
     }
     public void QuitGame()
     {

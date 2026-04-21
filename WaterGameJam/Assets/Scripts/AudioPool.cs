@@ -16,7 +16,7 @@ public class AudioPool : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+         //   DontDestroyOnLoad(gameObject);
             InitializePool();
         }
         else

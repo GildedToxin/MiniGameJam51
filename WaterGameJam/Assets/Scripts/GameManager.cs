@@ -49,10 +49,11 @@ public class GameManager : MonoBehaviour
         else
         {
             Instance = this;
-            DontDestroyOnLoad(this.gameObject);
+           // DontDestroyOnLoad(this.gameObject);
         }
         Cursor.lockState = CursorLockMode.Confined;
-       // Cursor.visible = false;
+        Cursor.visible = false;
+        // Cursor.visible = false;
 
     }
 

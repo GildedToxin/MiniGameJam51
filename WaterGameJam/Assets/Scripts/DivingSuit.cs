@@ -8,6 +8,7 @@ public class DivingSuit : MonoBehaviour, IPlayerLookTarget
     public DialogueGroup dialogueGroup;
 
     public GameObject spawnRoom;
+    public GameObject lighting;
     public Material blackMat;
     public AudioSource audioSource;
     public void OnLookEnter()
@@ -39,6 +40,7 @@ public class DivingSuit : MonoBehaviour, IPlayerLookTarget
         {
             r.material = blackMat;
         }
+        Destroy(lighting);
         GameManager.Instance.hasSuit = true;
         GameManager.Instance.playerCanPing = true;
 

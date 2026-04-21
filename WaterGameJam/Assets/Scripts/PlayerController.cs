@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         audioTransitions = FindAnyObjectByType<AudioTransitions>();
-        pause = FindAnyObjectByType<Pause>();
+       // pause = FindAnyObjectByType<Pause>();
     }
 
     private void Start()
@@ -146,8 +146,8 @@ public class PlayerController : MonoBehaviour
 
     private void LateUpdate()
     {
-        Debug.Log(pause);
-        if(pause != null && !pause.gameIsPaused)
+        //Debug.Log(pause);
+        if(!FindAnyObjectByType<PauseUI>().paused)
         {
             float mouseX = look.x * mouseSensitivity;
             float mouseY = look.y * mouseSensitivity;
@@ -161,7 +161,7 @@ public class PlayerController : MonoBehaviour
             transform.Rotate(Vector3.up * mouseX);
             LookDirection();
         }
-        else if(pause != null && pause.gameIsPaused)
+        else if(FindAnyObjectByType<PauseUI>().paused)
         {
             Debug.Log("game is paused");
         }
