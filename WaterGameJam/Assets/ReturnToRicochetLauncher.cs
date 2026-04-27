@@ -2,11 +2,12 @@
 using System.Diagnostics;
 using System.IO;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ReturnToRicochetLauncher : MonoBehaviour
 {
     public string launcherExe = "RicochetLauncher.exe";
-
+    public Button quit;
     public void ReturnToLauncher()
     {
         StartCoroutine(LaunchLauncherOrExit());
@@ -20,7 +21,7 @@ public class ReturnToRicochetLauncher : MonoBehaviour
 
         Process process = null;
         bool launchSucceeded = false;
-
+        quit.interactable = false;
         // Try to start launcher
         try
         {
