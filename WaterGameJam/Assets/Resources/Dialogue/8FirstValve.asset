@@ -17,4 +17,4 @@ MonoBehaviour:
   - 'BIOSCANNER FEEDBACK: TWO POSITIVE'
   audioClips:
   - {fileID: 8300000, guid: 1fd7337847d96d54582fae67d02b8a78, type: 3}
-  - {fileID: 8300000, guid: 4218e28fecb6271469223c6a9054ca18, type: 3}
+  - {fileID: 8300000, guid: f2b3cab68f99aa54ea5ab6236d6eb0d7, type: 3}
