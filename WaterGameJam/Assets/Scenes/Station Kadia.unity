@@ -35147,6 +35147,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AI
       objectReference: {fileID: 0}
+    - target: {fileID: 4429239416657413382, guid: 82ad3ac57735fab43b3d231739a10443, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4648444609986646464, guid: 82ad3ac57735fab43b3d231739a10443, type: 3}
       propertyPath: player
       value: 
@@ -50680,7 +50684,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1772128694
 MonoBehaviour:
   m_ObjectHideFlags: 0
