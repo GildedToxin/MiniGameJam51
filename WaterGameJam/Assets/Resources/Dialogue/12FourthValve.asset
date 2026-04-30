@@ -15,4 +15,4 @@ MonoBehaviour:
   lines:
   - PRESSURE THRESHOLD AT /// 70 /// Percent
   audioClips:
-  - {fileID: 8300000, guid: eb9420686c1f4ab41be8aa5763dc5816, type: 3}
+  - {fileID: 8300000, guid: 53d1e3dc693ef93419ae63c405a1af16, type: 3}

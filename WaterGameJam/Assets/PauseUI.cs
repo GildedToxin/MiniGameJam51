@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -7,6 +8,7 @@ public class PauseUI : MonoBehaviour
 {
     public GameObject UI;
     public bool paused = false;
+    public GameObject controls;
 
     // Update is called once per frame
     void Update()
@@ -27,6 +29,7 @@ public class PauseUI : MonoBehaviour
         Time.timeScale = 1;
         UI.SetActive(false);
         paused = false;
+        controls.SetActive(false);
     }
     public void pause(InputAction.CallbackContext ctx)
     {
@@ -41,5 +44,13 @@ public class PauseUI : MonoBehaviour
         Time.timeScale = paused ? 1 : 0;
         paused = !paused;
         UI.SetActive(!UI.activeSelf);
+        controls.SetActive(false);
+    }
+    public void OpenControls() {
+        controls.SetActive(true);
+    }
+    public void CloseControls()
+    {
+        controls.SetActive(false);
     }
 }

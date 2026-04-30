@@ -24,13 +24,13 @@ MonoBehaviour:
   - User, equip the facility issued diving suit stationed in the room.
   - Further instruction will be given after the suit has been equipped
   audioClips:
-  - {fileID: 8300000, guid: 4102a53559b2423439075f22dff03c9f, type: 3}
-  - {fileID: 8300000, guid: 57b6f704eaadd454bae7b3d91b69ccdb, type: 3}
-  - {fileID: 8300000, guid: 7ee8f9cc0ffe4e248a6e886b7e8a857e, type: 3}
-  - {fileID: 8300000, guid: 446105379565e5142b8faa5a99baa7f2, type: 3}
-  - {fileID: 8300000, guid: 9230357dfb733954c9311d3f92339d40, type: 3}
-  - {fileID: 8300000, guid: 32b49b0c6e350dc4dbf8790e7dea03ab, type: 3}
-  - {fileID: 8300000, guid: 45d6e5398e2b36843abdc1f2750ad2a9, type: 3}
-  - {fileID: 8300000, guid: ea02d32177277b848b0e9a47b5f2af83, type: 3}
-  - {fileID: 8300000, guid: 06359ddbc9b06f84fa91f4d98805a60a, type: 3}
-  - {fileID: 8300000, guid: 82aecdca86207054ea0e1f60412a30d0, type: 3}
+  - {fileID: 8300000, guid: c9a89f4cfb69e664eb35201b440c7b30, type: 3}
+  - {fileID: 8300000, guid: f1d39f60f6f876d48996360c081ff4c1, type: 3}
+  - {fileID: 8300000, guid: ec4dbc1769c885d45a8d6b3b6769e088, type: 3}
+  - {fileID: 8300000, guid: 896d15f42e8897549955d7f4fbc15ef6, type: 3}
+  - {fileID: 8300000, guid: b9e4d6222010914499754f152fe05051, type: 3}
+  - {fileID: 8300000, guid: 8ce2f9109a9f1d94191697a124ed470c, type: 3}
+  - {fileID: 8300000, guid: b9c1fd733ccc10444be8a87131066086, type: 3}
+  - {fileID: 8300000, guid: 578a9c61677707449a492af2546e62fe, type: 3}
+  - {fileID: 8300000, guid: addfe482f27acf14196b23fd3318ab04, type: 3}
+  - {fileID: 8300000, guid: a9df35b360d790b44ae188fe3764b8ee, type: 3}

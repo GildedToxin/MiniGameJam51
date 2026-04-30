@@ -26,11 +26,11 @@ MonoBehaviour:
   - setting one off will likely disable your suit and cause a premature implosion
     of the facility, so tread lightly
   audioClips:
-  - {fileID: 8300000, guid: b990fad017630e641a86b5c39e55ee88, type: 3}
-  - {fileID: 8300000, guid: 1182e8d638d174e41bd6480b10a7ba18, type: 3}
-  - {fileID: 8300000, guid: bde16caf33f8142498b0407d09258d00, type: 3}
-  - {fileID: 8300000, guid: 9bd34600448127a4091318b4893f67d0, type: 3}
-  - {fileID: 8300000, guid: 25529e0e7ad462644941452809258c83, type: 3}
-  - {fileID: 8300000, guid: 1b42a4879e3b54d4db50d1d82b7bc2aa, type: 3}
-  - {fileID: 8300000, guid: fab4c4a7ebfe2d846a3b22e3fd908fee, type: 3}
-  - {fileID: 8300000, guid: d4111959a62555840977bb2398ba8425, type: 3}
+  - {fileID: 8300000, guid: 3e8cdfff580623d4bbddd1cdb0d371f5, type: 3}
+  - {fileID: 8300000, guid: 98ec20299d8236d4c9057cb5e90f0be6, type: 3}
+  - {fileID: 8300000, guid: f79355fbf49727848836dfe064401d12, type: 3}
+  - {fileID: 8300000, guid: d129513b8560a0944a93f4656687803e, type: 3}
+  - {fileID: 8300000, guid: 1c9913ed662938044897e3f42c20a5d5, type: 3}
+  - {fileID: 8300000, guid: 3ddecaae30677b34f918be77725908b2, type: 3}
+  - {fileID: 8300000, guid: 7255898c23b16c141b5138496606bf98, type: 3}
+  - {fileID: 8300000, guid: 0ea6820f00ebdab44b885740e6c17551, type: 3}
