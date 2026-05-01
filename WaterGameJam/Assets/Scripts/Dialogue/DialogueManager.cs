@@ -1,7 +1,8 @@
-using UnityEngine;
-using UnityEngine.Audio;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
@@ -116,6 +117,7 @@ public class DialogueManager : MonoBehaviour
         if(dialogueGroup == doorDialougeGroup)
         {
             GameManager.Instance.door.GetComponent<MoveUp>().enabled = true;
+            FindAnyObjectByType<PlayerController>().canMove = true;
         }
         dialogueLineRunner.gameObject.SetActive(false);
         Debug.Log("Dialogue sequence finished");

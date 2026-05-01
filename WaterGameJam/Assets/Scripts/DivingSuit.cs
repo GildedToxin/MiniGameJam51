@@ -23,8 +23,9 @@ public class DivingSuit : MonoBehaviour, IPlayerLookTarget
     public void Interact()
     {
         isInteracting = true;
-
+        FindAnyObjectByType<PlayerController>().canMove = false;
         DialogueManager.Instance.PlayDialogueSequence(dialogueGroup);
+
         try
         {
             audioSource.Play();

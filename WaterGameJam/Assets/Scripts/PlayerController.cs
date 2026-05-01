@@ -62,6 +62,8 @@ public class PlayerController : MonoBehaviour
 
     public AudioClip playerDied;
 
+    public bool SuitOn;
+
     private void Awake()
     {
         audioTransitions = FindAnyObjectByType<AudioTransitions>();
